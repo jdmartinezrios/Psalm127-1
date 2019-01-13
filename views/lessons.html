@@ -31,28 +31,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../index.html" data-translate="home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Lessons</a>
+                    <a class="nav-link" href="#" data-translate="lesson">Lessons</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Content</a>
+                    <a class="nav-link" href="#" data-translate="content">Content</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                        aria-haspopup="true" aria-expanded="false" data-translate="language">
                         Language
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item" href="#" id="English2">English</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Spanish</a>
+                        <a class="dropdown-item" href="#" id="Spanish2">Spanish</a>
                     </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control search mr-sm-2" type="search" id="placeholder" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-light search-button my-2 my-sm-0" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
@@ -61,37 +61,37 @@
     </nav>
     <!-- End Header -->
     <!-- Main -->
-    <div class="container-fluid my-4">
+    <div class="container-fluid my-4" style="min-height: calc(100vh - 100px)">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-12">
                 <div class="list-group" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
-                        href="#list-home" role="tab" aria-controls="home">Home</a>
+                        href="#list-home" role="tab" aria-controls="home" data-translate="home">Home</a>
                     <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile"
-                        role="tab" aria-controls="profile">Lesson 1 <span class="badge badge-danger float-right">4</span></a>
+                        role="tab" aria-controls="profile" data-translate="lesson1">Lesson 1 <span class="badge badge-danger float-right">4</span></a>
                     <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages"
-                        role="tab" aria-controls="messages">Lesson 2 <span class="badge badge-danger float-right">4</span></a>
+                        role="tab" aria-controls="messages" data-translate="lesson2">Lesson 2 <span class="badge badge-danger float-right">4</span></a>
                     <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings"
-                        role="tab" aria-controls="settings">Lesson 3 <span class="badge badge-danger float-right">4</span></a>
+                        role="tab" aria-controls="settings" data-translate="lesson3">Lesson 3 <span class="badge badge-danger float-right">4</span></a>
                     <a class="list-group-item list-group-item-action" id="list-lesson4-list" data-toggle="list" href="#list-lesson4"
-                        role="tab" aria-controls="settings">Lesson 4 <span class="badge badge-danger float-right">4</span></a>
+                        role="tab" aria-controls="settings" data-translate="lesson4">Lesson 4 <span class="badge badge-danger float-right">4</span></a>
                     <a class="list-group-item list-group-item-action" id="list-lesson5-list" data-toggle="list" href="#list-lesson5"
-                        role="tab" aria-controls="settings">Lesson 5 <span class="badge badge-danger float-right">4</span></a>
+                        role="tab" aria-controls="settings" data-translate="lesson5">Lesson 5 <span class="badge badge-danger float-right">4</span></a>
                     <a class="list-group-item list-group-item-action" id="list-lesson6-list" data-toggle="list" href="#list-lesson6"
-                        role="tab" aria-controls="settings">Lesson 6 <span class="badge badge-danger float-right">4</span></a>
+                        role="tab" aria-controls="settings" data-translate="lesson6">Lesson 6 <span class="badge badge-danger float-right">4</span></a>
                 </div>
             </div>
             <div class="col-lg-9 col-md-9 col-sm-12">
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                        <h2 class="text-danger">All Lessons</h2>
+                        <h2 class="text-danger" data-translate="allLessons">All Lessons</h2>
                         <hr class="py-2">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsa unde ratione ea. Vel
                             laborum pariatur vitae, doloremque fugit asperiores itaque nemo tempore nesciunt atque
                             harum soluta esse commodi excepturi!</p>
                     </div>
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                        <h2 class="text-danger">Lesson 1</h2>
+                        <h2 class="text-danger" data-translate="lesson1">Lesson 1</h2>
                         <hr class="py-2">
                         <div class="d-flex justify-content-center align-items-center flex-wrap">
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
@@ -104,7 +104,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -146,14 +146,14 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                        <h2 class="text-danger">Lesson 2</h2>
+                        <h2 class="text-danger" data-translate="lesson2">Lesson 2</h2>
                         <hr class="py-2">
                         <div class="d-flex justify-content-center align-items-center flex-wrap">
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
@@ -166,7 +166,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -180,7 +180,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -208,14 +208,14 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                        <h2 class="text-danger">Lesson 3</h2>
+                        <h2 class="text-danger" data-translate="lesson3">Lesson 3</h2>
                         <hr class="py-2">
                         <div class="d-flex justify-content-center align-items-center flex-wrap">
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
@@ -228,7 +228,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"> View</a>
                                     </div>
                                 </div>
                             </div>
@@ -242,7 +242,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +256,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -270,14 +270,14 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="list-lesson4" role="tabpanel" aria-labelledby="list-lesson4-list">
-                        <h2 class="text-danger">Lesson 4</h2>
+                        <h2 class="text-danger" data-translate="lesson4">Lesson 4</h2>
                         <hr class="py-2">
                         <div class="d-flex justify-content-center align-items-center flex-wrap">
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
@@ -290,7 +290,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -304,7 +304,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -318,7 +318,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -332,14 +332,14 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="list-lesson5" role="tabpanel" aria-labelledby="list-lesson5-list">
-                        <h2 class="text-danger">Lesson 5</h2>
+                        <h2 class="text-danger" data-translate="lesson5">Lesson 5</h2>
                         <hr class="py-2">
                         <div class="d-flex justify-content-center align-items-center flex-wrap">
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
@@ -352,7 +352,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -366,7 +366,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -380,7 +380,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -394,14 +394,14 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="list-lesson6" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger">Lesson 6</h2>
+                        <h2 class="text-danger" data-translate="lesson6">Lesson 6</h2>
                         <hr class="py-2">
                         <div class="d-flex justify-content-center align-items-center flex-wrap">
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
@@ -414,7 +414,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -428,7 +428,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +442,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -456,7 +456,7 @@
                                         <p class="card-text">Some quick example text to build on the card title and
                                             make up the bulk of
                                             the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger">View</a>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -469,8 +469,6 @@
     <!-- End Main -->
     <!-- Footer -->
     <footer class="page-footer font-small bg-light shadow-lg">
-        <!-- Footer Elements -->
-        <!-- Footer Elements -->
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3 text-light">© 2019 Copyright:
             <a>David Helm</a>
@@ -480,9 +478,10 @@
     <!-- Footer -->
     <script type="text/javascript" src="../assets/please-wait/js/please-wait.js"></script>
     <script src="../js/jquery/dist/jquery.min.js"></script>
+    <script src="../js/translation/jqueryTranslator.min.js"></script>   
     <script src="../js/popper/umd/popper.min.js"></script>
     <script src="../js/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/lesson.js"></script> 
 </body>
 
 </html>

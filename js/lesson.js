@@ -1,19 +1,19 @@
 var intro;
 if (localStorage.getItem('language') === 'spanish') {
-    $('[data-translate]').jqTranslate('json/index', {
+    $('[data-translate]').jqTranslate('../json/index', {
         defaultLang: 'en', forceLang: 'es',
         asyncLangLoad: false       
     });
     document.getElementById('placeholder').placeholder = "Buscar";
     intro = "Jesús le dijo: Yo soy el camino, y la verdad, y la vida; nadie viene al Padre, sino por mí. | Juan 14: 6";
 } else {
-    $('[data-translate]').jqTranslate('json/index', {
+    $('[data-translate]').jqTranslate('../json/index', {
         defaultLang: 'es', forceLang: 'en',
         asyncLangLoad: false
     });
     document.getElementById('placeholder').placeholder = "Search";
     intro = "Jesus said to him: I am the way, and the truth, and the life; no one comes to the Father, but by me. | John 14:6";
-}
+} 
 
 window.loading_screen = window.pleaseWait({
     logo: "https://dewey.tailorbrands.com/production/brand_version_mockup_image/969/1573016969_2f91ff63-3035-41da-a665-d1efd145bc1b.png?cb=1547190880",
@@ -22,27 +22,23 @@ window.loading_screen = window.pleaseWait({
 });
 
 setTimeout(() => {
-    window.loading_screen.finish();
+    window.loading_screen.finish();   
 }, 4000);
 
-$('#Spanish').on('click', function (event) {
+$('#Spanish2').on('click',function(event) {
     (() => {
         localStorage.setItem('language', 'spanish');
-        $('[data-translate]').jqTranslate('json/index', {
-            defaultLang: 'en', forceLang: 'es',
-            asyncLangLoad: false
-        });
+        $('[data-translate]').jqTranslate('../json/index', {defaultLang: 'en', forceLang: 'es',
+        asyncLangLoad: false});    
         document.getElementById('placeholder').placeholder = "Buscar";
     })();
 });
 
-$('#English').on('click', function (event) {
+$('#English2').on('click',function(event) {
     (() => {
         localStorage.setItem('language', 'english');
-        $('[data-translate]').jqTranslate('json/index', {
-            defaultLang: 'es', forceLang: 'en',
-            asyncLangLoad: false
-        });
+        $('[data-translate]').jqTranslate('../json/index', {defaultLang: 'es', forceLang: 'en',
+        asyncLangLoad: false});
         document.getElementById('placeholder').placeholder = "Search";
     })();
 });

@@ -3,7 +3,7 @@
 
 <head>
     <meta name="decription" content="Religion">
-    <meta name="keywords" content="Pshalm 127-5">
+    <meta name="keywords" content="Pshalm 127:1a">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="autor" content="Juan Martinez">
     <meta charset="UTF-8">
@@ -29,28 +29,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html" data-translate="home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="views/lessons.html">Lessons</a>
+                    <a class="nav-link" href="views/lessons.html" data-translate="lesson">Lessons</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Content</a>
+                    <a class="nav-link" href="#" data-translate="content">Content</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                        aria-haspopup="true" aria-expanded="false" data-translate="language">
                         Language
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item" id="English" href="#">English</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Spanish</a>
+                        <a class="dropdown-item" id="Spanish" href="#">Spanish</a>
                     </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control search mr-sm-2" id="placeholder" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-light search-button my-2 my-sm-0" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
@@ -61,19 +61,19 @@
     <!-- Main -->
     <div class="content-video">
         <div class="container position-absolute d-flex justify-content-center align-items-center flex-column" style="z-index: 2000">
-            <h1 class="display-4 text-light text-center">Welcome to my website <span class="font-weight-bold">Psalm
-                    127-1</span></h1>
-            <p class="lead text-light w-75 text-center">If Jehovah does not build the house, In vain do those who build
+            <h1 class="display-4 text-light text-center"><span data-translate="welcome">Welcome to my website</span> <span class="font-weight-bold" data-translate="welcomePsalm">Psalm
+                    127:1a</span></h1>
+            <p class="lead text-light w-75 text-center" data-translate="psalm">If Jehovah does not build the house, In vain do those who build
                 it work; If Jehovah does not guard the city, In vain watches the guard.</p>
             <hr class="my-2">
-            <a class="btn btn-outline-light btn-lg" href="#" role="button">See more</a>
+            <a class="btn btn-outline-light btn-lg" href="#" role="button" data-translate="seeMore">See more</a>
         </div>
         <video class="content-into-video" src="./assets/videos/Pexels Videos 1630077.mp4" autoplay loop></video>
     </div>
     <!-- End Main -->
     <!-- Catalogos -->
     <div class="container-fluid mb-5">
-        <h2 class=" text-center w-100 my-5 title-catalogue text-danger">Recent Content</h2>       
+        <h2 class=" text-center w-100 my-5 title-catalogue text-danger" data-translate="recentContent">Recent Content</h2>       
         <div class="d-flex justify-content-center align-items-center flex-wrap">
             <div class="col-md-3 d-flex justify-content-center align-items-center">
                 <div class="card shadow-lg mb-3" style="width: 18rem;">
@@ -84,7 +84,7 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-outline-danger">See more</a>
+                        <a href="#" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-outline-danger">See more</a>
+                        <a href="#" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-outline-danger">See more</a>
+                        <a href="#" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-outline-danger">See more</a>
+                        <a href="#" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
                     </div>
                 </div>
             </div>
@@ -135,9 +135,9 @@
         <div class="card-parallax">
             <div class="card text-center bg-transparent text-white h-100">
                 <div class="card-body bg-transparent d-flex justify-content-center align-items-center flex-column">
-                    <h2 class="card-title">My job is to serve</h2>
-                    <p class="card-text lead">That you know how to deepen Jesus is my great goal.</p>
-                    <a href="#" class="btn btn-outline-light">know much more</a>
+                    <h2 class="card-title" data-translate="porpuse">My job is to serve</h2>
+                    <p class="card-text lead" data-translate="mission">That you know how to deepen Jesus is my great goal.</p>
+                    <a href="#" class="btn btn-outline-light" data-translate="knowMore">know much more</a>
                 </div>
             </div>
         </div>
@@ -193,9 +193,10 @@
     <!-- Footer -->    
     <script type="text/javascript" src="./assets/please-wait/js/please-wait.js"></script>
     <script src="./js/jquery/dist/jquery.min.js"></script>
+    <script src="./js/translation/jqueryTranslator.min.js"></script>
     <script src="./js/popper/umd/popper.min.js"></script>
-    <script src="./js/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap/dist/js/bootstrap.min.js"></script>   
+    <script src="./js/main.js"></script>   
 </body>
 
 </html>
