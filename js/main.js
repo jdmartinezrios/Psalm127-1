@@ -21,7 +21,11 @@ window.loading_screen = window.pleaseWait({
     loadingHtml: `<div class='sk-folding-cube'><div class='sk-cube1 sk-cube'></div><div class='sk-cube2 sk-cube'></div><div class='sk-cube4 sk-cube'></div><div class='sk-cube3 sk-cube'></div></div><p class='loading-message' data-translate='intro'>${intro}</p>`
 });
 
-var spanish = $('#Spanish').on('click', function (event) {
+setTimeout(() => {  
+    window.loading_screen.finish();
+}, 4000);
+
+$('#Spanish').on('click', function (event) {
     (() => {
         localStorage.setItem('language', 'spanish');
         $('[data-translate]').jqTranslate('json/index', {
@@ -32,7 +36,7 @@ var spanish = $('#Spanish').on('click', function (event) {
     })();
 });
 
-var english = $('#English').on('click', function (event) {
+$('#English').on('click', function (event) {
     (() => {
         localStorage.setItem('language', 'english');
         $('[data-translate]').jqTranslate('json/index', {
@@ -42,9 +46,3 @@ var english = $('#English').on('click', function (event) {
         document.getElementById('placeholder').placeholder = "Search";
     })();
 });
-
-setTimeout(() => {
-    spanish;
-    english;
-    window.loading_screen.finish();
-}, 4000);
