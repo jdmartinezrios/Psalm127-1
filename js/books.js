@@ -49,8 +49,8 @@ $('#English2').on('click', function (event) {
     })();
 });
 
-function showPdf(index) {
-    var pdfs = false; 
+function showPdf(index) {  
+    var pdfs;
     if (index == 1) {
         $('#loader').show();
         var pdf = $('#pdfView');        
@@ -68,7 +68,7 @@ function showPdf(index) {
         var options = {
             height: '555px'
         };
-         pdfs = PDFObject.embed(url, pdf, options);
+        pdfs2 = PDFObject.embed(url, pdf, options);
         (pdfs) ?  $('#loader2').hide(1000) : $('#loader2').show();
     } if (index == 3) {        
         $('#loader3').show();
