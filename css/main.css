@@ -10,6 +10,14 @@ body.pg-loaded > .inner {
     display: block;
 }
 
+.cardBody{
+    min-height: 120px !important;
+}
+
+.myCard{
+    min-height: 214px !important;
+}
+
 .content-into-video{
     min-width: 100%;    
     min-height: 100%;
