@@ -50,7 +50,18 @@ $('#English2').on('click', function (event) {
 });
 
 function showPdf(index) {  
-    var pdfs;
+    var pdfs = false;
+    var pdfs2 = false;
+    var pdfs3 = false;
+    var pdfs4 = false;
+    var pdfs5 = false;
+    var pdfs6 = false;
+    var pdfs7 = false;
+    var pdfs8 = false;
+    var pdfs9 = false;
+    var pdfs10 = false;
+    var pdfs11 = false;
+    var pdfs12 = false;
     if (index == 1) {
         $('#loader').show();
         var pdf = $('#pdfView');        
@@ -69,7 +80,7 @@ function showPdf(index) {
             height: '555px'
         };
         pdfs2 = PDFObject.embed(url, pdf, options);
-        (pdfs) ?  $('#loader2').hide(1000) : $('#loader2').show();
+        (pdfs2) ?  $('#loader2').hide(1000) : $('#loader2').show();
     } if (index == 3) {        
         $('#loader3').show();
         var pdf = $('#pdfView3');
@@ -77,8 +88,8 @@ function showPdf(index) {
         options = {
             height: '555px'
         };
-        pdfs = PDFObject.embed(url, pdf, options);
-        (pdfs) ?  $('#loader3').hide(1000) : $('#loader3').show();
+        pdfs3 = PDFObject.embed(url, pdf, options);
+        (pdfs3) ?  $('#loader3').hide(1000) : $('#loader3').show();
     } if (index == 4) {        
         $('#loader4').show();
         var pdf = $('#pdfView4');
@@ -86,8 +97,8 @@ function showPdf(index) {
         options = {
             height: '555px'
         };
-        pdfs = PDFObject.embed(url, pdf, options);
-        (pdfs) ?  $('#loader4').hide(1000) : $('#loader4').show();
+        pdfs4 = PDFObject.embed(url, pdf, options);
+        (pdfs4) ?  $('#loader4').hide(1000) : $('#loader4').show();
     } if (index == 5) {        
         $('#loader5').show();
         var pdf = $('#pdfView5');
@@ -95,8 +106,8 @@ function showPdf(index) {
         options = {
             height: '555px'
         };
-        pdfs = PDFObject.embed(url, pdf, options);
-        (pdfs) ?  $('#loader5').hide(1000) : $('#loader5').show();
+        pdfs5 = PDFObject.embed(url, pdf, options);
+        (pdfs5) ?  $('#loader5').hide(1000) : $('#loader5').show();
     } if (index == 6) {        
         $('#loader6').show();
         var pdf = $('#pdfView6');
@@ -104,8 +115,8 @@ function showPdf(index) {
         options = {
             height: '555px'
         };
-        pdfs = PDFObject.embed(url, pdf, options);
-        (pdfs) ?  $('#loader6').hide(1000) : $('#loader6').show();
+        pdfs6 = PDFObject.embed(url, pdf, options);
+        (pdfs6) ?  $('#loader6').hide(1000) : $('#loader6').show();
     } if (index == 7) {        
         $('#loader7').show();
         var pdf = $('#pdfView7');
@@ -113,8 +124,8 @@ function showPdf(index) {
         options = {
             height: '555px'
         };
-        pdfs = PDFObject.embed(url, pdf, options);
-        (pdfs) ?  $('#loader7').hide(1000) : $('#loader7').show();
+        pdfs7 = PDFObject.embed(url, pdf, options);
+        (pdfs7) ?  $('#loader7').hide(1000) : $('#loader7').show();
     } if (index == 8) {        
         $('#loader8').show();
         var pdf = $('#pdfView8');
@@ -122,8 +133,8 @@ function showPdf(index) {
         options = {
             height: '555px'
         };
-        pdfs = PDFObject.embed(url, pdf, options);
-        (pdfs) ?  $('#loader8').hide(1000) : $('#loader8').show();
+        pdfs8 = PDFObject.embed(url, pdf, options);
+        (pdfs8) ?  $('#loader8').hide(1000) : $('#loader8').show();
     } if (index == 9) {        
         $('#loader9').show();
         var pdf = $('#pdfView9');
@@ -131,8 +142,8 @@ function showPdf(index) {
         options = {
             height: '555px'
         };
-        pdfs = PDFObject.embed(url, pdf, options);
-        (pdfs) ?  $('#loader9').hide(1000) : $('#loader9').show();
+        pdfs9 = PDFObject.embed(url, pdf, options);
+        (pdfs9) ?  $('#loader9').hide(1000) : $('#loader9').show();
     } if (index == 10) {        
         $('#loader10').show();
         var pdf = $('#pdfView10');
@@ -140,8 +151,8 @@ function showPdf(index) {
         options = {
             height: '555px'
         };
-        pdfs = PDFObject.embed(url, pdf, options);
-        (pdfs) ?  $('#loader10').hide(1000) : $('#loader10').show();
+        pdfs10 = PDFObject.embed(url, pdf, options);
+        (pdfs10) ?  $('#loader10').hide(1000) : $('#loader10').show();
     } if (index == 11) {        
         $('#loader11').show();
         var pdf = $('#pdfView11');
@@ -149,8 +160,8 @@ function showPdf(index) {
         options = {
             height: '555px'
         };
-        pdfs = PDFObject.embed(url, pdf, options);
-        (pdfs) ?  $('#loader11').hide(1000) : $('#loader11').show();
+        pdfs11 = PDFObject.embed(url, pdf, options);
+        (pdfs11) ?  $('#loader11').hide(1000) : $('#loader11').show();
     } if (index == 12) {        
         $('#loader12').show();
         var pdf = $('#pdfView12');
@@ -158,7 +169,7 @@ function showPdf(index) {
         options = {
             height: '555px'
         };
-        pdfs = PDFObject.embed(url, pdf, options);
-        (pdfs) ?  $('#loader12').hide(1000) : $('#loader12').show();
+        pdfs12 = PDFObject.embed(url, pdf, options);
+        (pdfs12) ?  $('#loader12').hide(1000) : $('#loader12').show();
     }
 }
