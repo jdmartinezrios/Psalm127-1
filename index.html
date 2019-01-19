@@ -19,7 +19,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(128,0,0)">
         <a class="navbar-brand" href="index.html">
             <!-- <span class="font-weight-bold">Psalm</span><span class="disabled">127-1</span> -->
-            <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/969/1573016969_2f91ff63-3035-41da-a665-d1efd145bc1b.png?cb=1547190880" alt="" height="30" width="60">
+            <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/969/1573016969_2f91ff63-3035-41da-a665-d1efd145bc1b.png?cb=1547190880"
+                alt="" height="30" width="60">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,10 +33,10 @@
                     <a class="nav-link" href="index.html" data-translate="home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="views/lessons.html" data-translate="lesson">Lessons</a>
+                    <a class="nav-link" href="views/books.html" data-translate="books">Books</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-translate="content">Content</a>
+                    <a class="nav-link" href="views/lessons.html" data-translate="lesson">Lessons</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -50,7 +51,8 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control search mr-sm-2" id="placeholder" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control search mr-sm-2" id="placeholder" type="search" placeholder="Search"
+                    aria-label="Search">
                 <button class="btn btn-outline-light search-button my-2 my-sm-0" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
@@ -61,19 +63,34 @@
     <!-- Main -->
     <div class="content-video">
         <div class="container position-absolute d-flex justify-content-center align-items-center flex-column" style="z-index: 2000">
-            <h1 class="display-4 text-light text-center"><span data-translate="welcome">Welcome to my website</span> <span class="font-weight-bold" data-translate="welcomePsalm">Psalm
+            <h1 class="display-4 text-light text-center"><span data-translate="welcome">Welcome to the website</span>
+                <span class="font-weight-bold" data-translate="welcomePsalm">Psalm
                     127:1a</span></h1>
-            <p class="lead text-light w-75 text-center" data-translate="psalm">If Jehovah does not build the house, In vain do those who build
-                it work; If Jehovah does not guard the city, In vain watches the guard.</p>
+            <p class="lead text-light w-75 text-center" data-translate="psalm">Unless the lord builds the house, the
+                builders labor in vain.</p>
             <hr class="my-2">
             <a class="btn btn-outline-light btn-lg" href="#" role="button" data-translate="seeMore">See more</a>
         </div>
         <video class="content-into-video" src="./assets/videos/Pexels Videos 1630077.mp4" autoplay loop></video>
     </div>
     <!-- End Main -->
+    <!-- Description of WEBSITE -->
+    <div class="container-fluid">
+        <div class="card bg-transparent d-flex justify-content-center align-items-center py-4 text-center" style="border-style: none">
+            <h1 class="card-title text-danger" data-translate="titleDedicated">
+                This website is dedicated to
+            </h1>
+            <p class="card-text lead w-75" data-translate="dedicated">The nameless, faceless, and victorious generation
+                that will see the Lord come back to earth and to my miraculous son (now 19 months old) who I
+                believe will be one of them.
+            </p>
+        </div>
+        <hr>
+    </div>
+    <!-- End Description -->
     <!-- Catalogos -->
     <div class="container-fluid mb-5">
-        <h2 class=" text-center w-100 my-5 title-catalogue text-danger" data-translate="recentContent">Recent Content</h2>       
+        <h2 class=" text-center w-100 my-5 title-catalogue text-danger" data-translate="recentContent">Recent Content</h2>
         <div class="d-flex justify-content-center align-items-center flex-wrap">
             <div class="col-md-3 d-flex justify-content-center align-items-center">
                 <div class="card shadow-lg mb-3" style="width: 18rem;">
@@ -136,7 +153,8 @@
             <div class="card text-center bg-transparent text-white h-100">
                 <div class="card-body bg-transparent d-flex justify-content-center align-items-center flex-column">
                     <h2 class="card-title" data-translate="porpuse">My job is to serve</h2>
-                    <p class="card-text lead" data-translate="mission">That you know how to deepen Jesus is my great goal.</p>
+                    <p class="card-text lead" data-translate="mission">That you know how to deepen Jesus is my great
+                        goal.</p>
                     <a href="#" class="btn btn-outline-light" data-translate="knowMore">know much more</a>
                 </div>
             </div>
@@ -182,21 +200,59 @@
                 <!-- Grid column -->
             </div>
             <!-- Grid row-->
+            <hr>
+            <!-- Second Row -->
+            <form action="php/sendEmail.php" method="POST" class="my-5">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        <h3 class="text-danger" data-translate="comments">Tell us what you think of the website.</h3>
+
+                        <div class="form-group">
+                            <textarea name="suggestions" id="suggestions" cols="100" rows="7" class="form-control form-contact"
+                                placeholder="Suggestions"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        <div class="form-row form-right">
+                            <div class="form-group col-md-6">
+                                <label for="firstName" class="text-danger" data-translate="name">First name</label>
+                                <input type="text" class="form-control form-contact" id="firstName" name="firstName">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastName" class="text-danger" data-translate="lastName">Last name</label>
+                                <input type="text" class="form-control form-contact" id="lastName" name="lastName">
+                            </div>
+                        </div>
+                        <div class="col-md-12 px-0">
+                            <label for="email" class="text-danger" data-translate="email">Email address</label>
+                            <input type="text" class="form-control form-contact" id="email" name="email">
+                        </div>
+                        <button type="submit" class="btn btn-outline-danger mt-4 btn-md" data-translate="send">Send</button>
+                    </div>
+                </div>
+            </form>
+            <!-- End Second row -->
         </div>
         <!-- Footer Elements -->
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 text-light">© 2019 Copyright:
-            <a>David Helm</a>
+        <div class="footer-copyright text-center py-1 px-3 text-light">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/969/1573016969_2f91ff63-3035-41da-a665-d1efd145bc1b.png?cb=1547190880"
+                        alt="" height="30" width="60">
+                </a>
+                <a>© 2019 Copyright: David Helm.</a>
+            </div>
         </div>
         <!-- Copyright -->
     </footer>
-    <!-- Footer -->    
+    <!-- Footer -->
     <script type="text/javascript" src="./assets/please-wait/js/please-wait.js"></script>
     <script src="./js/jquery/dist/jquery.min.js"></script>
     <script src="./js/translation/jqueryTranslator.min.js"></script>
     <script src="./js/popper/umd/popper.min.js"></script>
-    <script src="./js/bootstrap/dist/js/bootstrap.min.js"></script>   
-    <script src="./js/main.js"></script>   
+    <script src="./js/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

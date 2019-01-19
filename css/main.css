@@ -78,7 +78,8 @@ body.pg-loaded > .inner {
 
 footer.page-footer .footer-copyright {
     overflow: hidden;
-    background-color: rgba(128,0,0, .9);    
+    margin: auto;
+    background-color: rgba(128,0,0, .9);   
 }
 
 .list-group-item.active{
@@ -104,8 +105,21 @@ footer.page-footer .footer-copyright {
     box-shadow:0 0 0 0.2rem #dc3545;
 }
 
+.form-control.form-contact:focus{
+    box-shadow:0 0 0 0.2rem #80353580;
+    border-color: rgb(128,0,0) !important;
+}
+
+.form-right{
+    margin-top: 9px;
+}
+
 .search-button{
     border: none;
+}
+
+.text-comunicated{
+    text-align: justify;
 }
 
 ::-webkit-scrollbar {
@@ -127,9 +141,10 @@ footer.page-footer .footer-copyright {
 
 .loading-message{
     color: #fff;
-    max-width: 32em;
+    max-width: 22.5em;
     margin: 20px auto;
     padding: 3em 0;
+    font-size: 20px;    
 }
 
 .sk-folding-cube {

@@ -5,14 +5,16 @@ if (localStorage.getItem('language') === 'spanish') {
         asyncLangLoad: false       
     });
     document.getElementById('placeholder').placeholder = "Buscar";
-    intro = "Jesús le dijo: Yo soy el camino, y la verdad, y la vida; nadie viene al Padre, sino por mí. | Juan 14: 6";
+    document.getElementById('suggestions').placeholder = "Sugerencias";
+    intro = "Consideraciones fundamentales antes de ir, iniciar o enviar.";
 } else {
     $('[data-translate]').jqTranslate('json/index', {
         defaultLang: 'es', forceLang: 'en',
         asyncLangLoad: false
     });
     document.getElementById('placeholder').placeholder = "Search";
-    intro = "Jesus said to him: I am the way, and the truth, and the life; no one comes to the Father, but by me. | John 14:6";
+    document.getElementById('suggestions').placeholder = "Suggestions";
+    intro = "Foundational Considerations Before Going, Starting or Sending.";
 }
 
 window.loading_screen = window.pleaseWait({
@@ -33,6 +35,7 @@ $('#Spanish').on('click', function (event) {
             asyncLangLoad: false
         });
         document.getElementById('placeholder').placeholder = "Buscar";
+        document.getElementById('suggestions').placeholder = "Sugerencias";
     })();
 });
 
@@ -44,5 +47,6 @@ $('#English').on('click', function (event) {
             asyncLangLoad: false
         });
         document.getElementById('placeholder').placeholder = "Search";
+        document.getElementById('suggestions').placeholder = "Suggestions";
     })();
 });
