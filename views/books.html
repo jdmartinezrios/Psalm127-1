@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/css/font-awesome.min.css ">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/lessons.css">
+    <link rel="stylesheet" href="../css/books.css">
 </head>
 
-<body>
+<body onload="OnInit()">    
     <!-- Section of header -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(128,0,0)">
         <a class="navbar-brand" href="../index.html">
@@ -106,61 +106,73 @@
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                         <h2 class="text-danger" data-translate="chapter1">Chapter 1</h2>
                         <hr class="pt-2">
+                        <div class="loader" id="loader"></div>
                         <div id="pdfView" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
                         <h2 class="text-danger" data-translate="chapter2">Chapter 2</h2>
                         <hr class="pt-2">
+                        <div class="loader" id="loader2"></div>
                         <div id="pdfView2" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
                         <h2 class="text-danger" data-translate="chapter3">Chapter 3</h2>                      
                         <hr class="pt-2">
+                        <div class="loader" id="loader3"></div>
                         <div id="pdfView3" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book4" role="tabpanel" aria-labelledby="list-lesson4-list">
                         <h2 class="text-danger" data-translate="chapter4">Chapter 4</h2>                     
                         <hr class="pt-2">
+                        <div class="loader" id="loader4"></div>
                         <div id="pdfView4" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book5" role="tabpanel" aria-labelledby="list-lesson5-list">
                         <h2 class="text-danger" data-translate="chapter5">Chapter 5</h2>                
                         <hr class="pt-2">
+                        <div class="loader" id="loader5"></div>
                         <div id="pdfView5" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book6" role="tabpanel" aria-labelledby="list-lesson6-list">
                         <h2 class="text-danger" data-translate="chapter6">Chapter 6</h2>
                         <hr class="pt-2">
+                        <div class="loader" id="loader6"></div>
                         <div id="pdfView6" class="shadow-lg"></div>                        
                     </div>
                     <div class="tab-pane fade" id="list-book7" role="tabpanel" aria-labelledby="list-lesson6-list">
                         <h2 class="text-danger" data-translate="chapter7">Chapter 7</h2>
                         <hr class="pt-2">
+                        <div class="loader" id="loader7"></div>
                         <div id="pdfView7" class="shadow-lg"></div>                        
                     </div>
                     <div class="tab-pane fade" id="list-book8" role="tabpanel" aria-labelledby="list-lesson6-list">
                         <h2 class="text-danger" data-translate="chapter8">Chapter 8</h2>
                         <hr class="pt-2">
+                        <div class="loader" id="loader8"></div>
                         <div id="pdfView8" class="shadow-lg"></div>                       
                     </div>
                     <div class="tab-pane fade" id="list-book9" role="tabpanel" aria-labelledby="list-lesson6-list">
                         <h2 class="text-danger" data-translate="chapter9">Chapter 9</h2>
                         <hr class="pt-2">
+                        <div class="loader" id="loader9"></div>
                         <div id="pdfView9" class="shadow-lg"></div>                        
                     </div>
                     <div class="tab-pane fade" id="list-book10" role="tabpanel" aria-labelledby="list-lesson6-list">
                         <h2 class="text-danger" data-translate="chapter10">Chapter 10</h2>
                         <hr class="pt-2">
+                        <div class="loader" id="loader10"></div>
                         <div id="pdfView10" class="shadow-lg"></div>                       
                     </div>
                     <div class="tab-pane fade" id="list-book11" role="tabpanel" aria-labelledby="list-lesson6-list">
                         <h2 class="text-danger" data-translate="chapter11">Chapter 11</h2>
                         <hr class="pt-2">
+                        <div class="loader" id="loader11"></div>
                         <div id="pdfView11" class="shadow-lg"></div>                       
                     </div>
                     <div class="tab-pane fade" id="list-book12" role="tabpanel" aria-labelledby="list-lesson6-list">
                         <h2 class="text-danger" data-translate="chapter12">Chapter 12</h2>
                         <hr class="pt-2">
+                        <div class="loader" id="loader12"></div>
                         <div id="pdfView12" class="shadow-lg"></div>                        
                     </div>                   
                 </div>
