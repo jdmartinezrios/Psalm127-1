@@ -21,6 +21,11 @@ footer.page-footer .footer-copyright {
     animation: spin 2s linear infinite;
   }
 
+.modal-header{
+    background-color: rgb(128,0,0) !important;
+    color: #fff !important;
+}
+
   .close{
     color: #fff !important;
   }

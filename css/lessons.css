@@ -40,11 +40,21 @@ footer.page-footer .footer-copyright {
     animation: spin 2s linear infinite;
   }
 
+  .close{
+    color: #fff !important;
+  }
+
+.modal-header{
+    background-color: rgb(128,0,0) !important;
+    color: #fff !important;
+}
+  
   .modal-body{
     justify-content: center;
     align-items: center;
     display: flex;
   }
+
   
   @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
