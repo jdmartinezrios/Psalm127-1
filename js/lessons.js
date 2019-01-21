@@ -282,73 +282,73 @@ function showPdf(index) {
         }
             break;
         case 33: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView33', "../assets/PDF/Apocalipsis/Spanish_1_20140207_Introduction_and_Overview_of_the_Book_of_Revelation_BOR01_1.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView33', "../assets/PDF/Revelations/1_20140207_Introduction_and_Overview_of_the_Book_of Revelation_BOR01_1.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView33', "../assets/PDF/Apocalipsis/Spanish_1_20140207_Introduction_and_Overview_of_the_Book_of_Revelation_BOR01_1.pdf");
         }
             break;
         case 34: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView34', "../assets/PDF/Apocalipsis/Spanish_2_20140214_The_Varying _Importance_of_End_Time_Doctrines_BOR02_1.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView34', "../assets/PDF/Revelations/2_20140214_The_Varying _Importance_of_End_Time_Doctrines_BOR02_1.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView34', "../assets/PDF/Apocalipsis/Spanish_2_20140214_The_Varying _Importance_of_End_Time_Doctrines_BOR02_1.pdf");
         }
             break;
         case 35: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView35', "../assets/PDF/Apocalipsis/Spanish_3_BOR_03_The_Theme_of_the_book_of_Revelation.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView35', "../assets/PDF/Revelations/3_BOR_03_The_Theme_of_the_book_of_Revelation.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView35', "../assets/PDF/Apocalipsis/Spanish_3_BOR_03_The_Theme_of_the_book_of_Revelation.pdf");
         }
             break;
         case 36: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView36', "../assets/PDF/Apocalipsis/Spanish_4_BOR_04_The_Seven_Churches_Called_to_Overcome_Rev_2_3.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView36', "../assets/PDF/Revelations/4_BOR_04_The_Seven_Churches_Called_to_Overcome_Rev_ 2_3.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView36', "../assets/PDF/Apocalipsis/Spanish_4_BOR_04_The_Seven_Churches_Called_to_Overcome_Rev_2_3.pdf");
         }
             break;
         case 37: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView37', "../assets/PDF/Apocalipsis/Spanish_5_BOR_05__Father_s_Throne_and_Jesus_Exaltation_Rev_4_5_with_blanks.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView37', "../assets/PDF/Revelations/5_BOR_05_Father_s_Throne_and_Jesus_Exaltation.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView37', "../assets/PDF/Apocalipsis/Spanish_5_BOR_05__Father_s_Throne_and_Jesus_Exaltation_Rev_4_5_with_blanks.pdf");
         }
             break;
         case 38: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView38', "../assets/PDF/Apocalipsis/Spanish_6_BOR_06__Seals_of_Judgment_and_God_s_Protection_Rev_6_7_with_blanks.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView38', "../assets/PDF/Revelations/6_BOR_06_Seals_of_Judgment_and_Gods_Protection_Rev_6_7_3.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView38', "../assets/PDF/Apocalipsis/Spanish_6_BOR_06__Seals_of_Judgment_and_God_s_Protection_Rev_6_7_with_blanks.pdf");
         }
             break;
         case 39: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView39', "../assets/PDF/Apocalipsis/Spanish_7_BOR_07_The_Trumpet_Judgments_Rev_8_9_with_blanks.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView39', "../assets/PDF/Revelations/7_BOR_07_The_Trumpets_Judgments_Rev_8_9_1.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView39', "../assets/PDF/Apocalipsis/Spanish_7_BOR_07_The_Trumpet_Judgments_Rev_8_9_with_blanks.pdf");
         }
             break;
         case 40: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView40', "../assets/PDF/Apocalipsis/Spanish_8_BOR_08_Prophetic_Ministry_in_End_Times_Rev_10_11_with_blanks.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView40', "../assets/PDF/Revelations/8_BOR_08_Prophetic_Ministry_in_End_Times_Rev_10_11.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView40', "../assets/PDF/Apocalipsis/Spanish_8_BOR_08_Prophetic_Ministry_in_End_Times_Rev_10_11_with_blanks.pdf");
         }
             break;
         case 41: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView41', "../assets/PDF/Apocalipsis/Spanish_9_BOR_09_2nd_Coming_Rapture_and_War_in_the_Spirit_Rev_11_14_without_blanks.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView41', "../assets/PDF/Revelations/9_BOR_09_2nd_Coming_Rapture_and_War_in_the_Spirit.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView41', "../assets/PDF/Apocalipsis/Spanish_9_BOR_09_2nd_Coming_Rapture_and_War_in_the_Spirit_Rev_11_14_without_blanks.pdf");
         }
             break;
         case 42: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView42', "../assets/PDF/Apocalipsis/Spanish_10_20140426_Seven_Bowls_of_Wrath_Rev15_16_SOS10.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView42', "../assets/PDF/Revelations/10_20140426_Seven_Bowls_of_Wrath_Rev15_16_SOS10.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView42', "../assets/PDF/Apocalipsis/Spanish_10_20140426_Seven_Bowls_of_Wrath_Rev15_16_SOS10.pdf");
         }
             break;
         case 43: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView43', "../assets/PDF/Apocalipsis/Spanish_11_BOR_11_Fall_of_Babylon_Rev_17_18.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView43', "../assets/PDF/Revelations/11_BOR_11_Fall_of_Babylon.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView43', "../assets/PDF/Apocalipsis/Spanish_11_BOR_11_Fall_of_Babylon_Rev_17_18.pdf");
-        }
+        }       
             break;
         case 44: if (getLanguage() == 'english') {
-            assingFileSelector('#loader3', '#pdfView3', 'pdfView44', "../assets/PDF/Apocalipsis/Spanish_12_BOR_12_Victory_and_the_Restoration_of_All_Things_Rev19_22.pdf");
+            assingFileSelector('#loader3', '#pdfView3', 'pdfView44', "../assets/PDF/Revelations/12_BOR_12_Victory_and_Restoration_of_All_Things.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView44', "../assets/PDF/Apocalipsis/Spanish_12_BOR_12_Victory_and_the_Restoration_of_All_Things_Rev19_22.pdf");
         }
