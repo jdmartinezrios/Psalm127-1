@@ -289,3 +289,9 @@ footer.page-footer .footer-copyright {
         margin-top: .5em;
     }
   }
+
+  @media screen and (max-width: 460px) {
+    .parallax{
+        height: 30em;
+    }
+  }
