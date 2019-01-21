@@ -1,6 +1,6 @@
 {
     "welcome": "Bienvenido al sitio web",
-    "welcomePsalm": "Salmo 127-1",
+    "welcomePsalm": "Salmo 127:1a",
     "psalm": "Si Jehová no construye la casa, en vano trabajarán los que la construyen.",
     "seeMore": "Ver más",
     "titleDedicated": "Este sitio web está dedicado a",
@@ -13,12 +13,9 @@
     "porpuse": "Mi trabajo es servir",
     "mission" : "Que sepas cómo profundizar en Jesús es mi gran meta.",
     "knowMore": "Conoce mucho más",   
-    "lesson1": "Lección 1",
-    "lesson2": "Lección 2",
-    "lesson3": "Lección 3",
-    "lesson4": "Lección 4",
-    "lesson5": "Lección 5",
-    "lesson6": "Lección 6",
+    "lesson1": "Primero y gran mandamiento",
+    "lesson2": "Sermón del monte",
+    "lesson3": "Apocalipsis",   
     "chapter1": "Capítulo 1",
     "chapter2": "Capítulo 2",
     "chapter3": "Capítulo 3",
@@ -43,8 +40,8 @@
     "suggestions": "Sugerencias",
     "chapter": "Capítulo",
     "introduction": "Introducción",
-    "1photo": "1) Comienza aquí. Lea (o escuche) cómo el amor soberano de Dios alcanza sobrenaturalmente a un nuevo creyente y le da nacimiento a un libro.",    
-    "2photo": "2) Siguiente. Escavar una base de vida que nunca pierde el enfoque de lo que Jesús dijo debe ser lo primero y grande.",
-    "3photo": "3) A continuación. Siga de cerca el plano detallado de Jesús cómo construir un corazón que esté continuamente vibrante con el amor y los propósitos de Dios.",
-    "4photo": "4) Último (por ahora). Refuerce su fe y confianza en Dios al estar plenamente consciente y preparado para los eventos futuros de Jesús."
+    "1photo": "Lea (o escuche) cómo el amor soberano de Dios alcanza sobrenaturalmente a un nuevo creyente y le da nacimiento a un libro.",    
+    "2photo": "Escavar una base de vida que nunca pierde el enfoque de lo que Jesús dijo debe ser lo primero y grande.",
+    "3photo": "Siga de cerca el plano detallado de Jesús cómo construir un corazón que esté continuamente vibrante con el amor y los propósitos de Dios.",
+    "4photo": "Refuerce su fe y confianza en Dios al estar plenamente consciente y preparado para los eventos futuros de Jesús."
 }

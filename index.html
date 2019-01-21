@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="./assets/please-wait/js/please-wait.css">
     <link rel="stylesheet" href="./css/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/css/font-awesome.min.css ">
+    <link rel="stylesheet" href="./css/animate.css/animate.min.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body onload="OnInit();">
+<body onload="OnInit();" class="animated fadeIn">
     <!-- Section of header -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(128,0,0)">
         <a class="navbar-brand" href="index.html">
@@ -29,13 +30,13 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item active" id="nav1">
                     <a class="nav-link" href="index.html" data-translate="home">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="nav2">
                     <a class="nav-link" href="views/books.html" data-translate="books">Books</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="nav3">
                     <a class="nav-link" href="views/lessons.html" data-translate="lesson">Lessons</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -43,10 +44,10 @@
                         aria-haspopup="true" aria-expanded="false" data-translate="language">
                         Language
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" id="English" href="#">English</a>
+                    <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item position-relative" id="English" href="#">English <img src="./assets/images/usa.png" class="img-flag"></a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" id="Spanish" href="#">Spanish</a>
+                        <a class="dropdown-item position-relative" id="Spanish" href="#">Spanish <img src="./assets/images/colombia.png" class="img-flag"></a>
                     </div>
                 </li>
             </ul>
@@ -62,7 +63,7 @@
     <!-- End Header -->
     <!-- Main -->
     <div class="content-video">
-        <div class="container position-absolute d-flex justify-content-center align-items-center flex-column" style="z-index: 2000">
+        <div class="container position-absolute d-flex justify-content-center align-items-center flex-column wow zoomInUp" style="z-index: 2000" data-wow-duration="2s" data-wow-delay="3.5s">
             <h1 class="display-4 text-light text-center"><span data-translate="welcome">Welcome to the website</span>
                 <span class="font-weight-bold" data-translate="welcomePsalm">Psalm
                     127:1a</span></h1>
@@ -73,14 +74,14 @@
         </div>
         <video class="content-into-video" src="./assets/videos/Pexels Videos 1630077.mp4" autoplay loop></video>
     </div>
-    <!-- End Main -->
+    <!-- End Main -->   
     <!-- Description of WEBSITE -->
     <div class="container-fluid">
         <div class="card bg-transparent d-flex justify-content-center align-items-center py-4 text-center" style="border-style: none">
-            <h1 class="card-title text-danger" data-translate="titleDedicated">
+            <h1 class="card-title text-danger wow fadeIn" data-translate="titleDedicated" data-wow-duration="2s">
                 This website is dedicated to
             </h1>
-            <p class="card-text lead w-75" data-translate="dedicated">The nameless, faceless, and victorious generation
+            <p class="card-text lead w-75 wow fadeInUp" data-translate="dedicated" data-wow-duration="3s" data-wow-delay=".2">The nameless, faceless, and victorious generation
                 that will see the Lord come back to earth and to my miraculous son (now 19 months old) who I
                 believe will be one of them.
             </p>
@@ -90,10 +91,10 @@
     <!-- End Description -->
     <!-- Catalogos -->
     <div class="container-fluid mb-5">
-        <h2 class=" text-center w-100 my-5 title-catalogue text-danger" data-translate="recentContent">Recent Content</h2>
+        <h2 class=" text-center w-100 my-5 title-catalogue text-danger wow slideInUp fadeIn" data-translate="recentContent" data-wow-duration="3s" data-wow-delay=".1s">Recent Content</h2>
         <div class="d-flex justify-content-center align-items-center flex-wrap">
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                <div class="card shadow-lg mb-3 wow zoomIn" data-wow-duration="2s" data-wow-delay="1.25s" style="width: 18rem;">
                     <div class="content-img">
                         <img src="https://images.pexels.com/photos/1231230/pexels-photo-1231230.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
                             class="card-img-top" alt="...">
@@ -101,12 +102,12 @@
                     <div class="card-body myCard">
                         <p class="card-text cardBody" data-translate="1photo">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
+                        <a href="./views/books.html" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                <div class="card shadow-lg mb-3 wow zoomIn" data-wow-duration="2s" data-wow-delay="1.25s" style="width: 18rem;">
                     <div class="content-img">
                         <img src="https://images.pexels.com/photos/1116302/pexels-photo-1116302.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
                             class="card-img-top" alt="...">
@@ -114,12 +115,12 @@
                     <div class="card-body myCard">
                         <p class="card-text cardBody" data-translate="2photo">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
+                        <a href="./views/lessons.html" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                <div class="card shadow-lg mb-3 wow zoomIn" data-wow-duration="2s" data-wow-delay="1.25s" style="width: 18rem;">
                     <div class="content-img">
                         <img src="https://images.pexels.com/photos/818252/pexels-photo-818252.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
                             class="card-img-top" alt="...">
@@ -127,12 +128,12 @@
                     <div class="card-body myCard">
                         <p class="card-text cardBody" data-translate="3photo">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
+                        <a href="./views/lessons.html" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                <div class="card shadow-lg mb-3 wow zoomIn" data-wow-duration="2s" data-wow-delay="1.25s" style="width: 18rem;">
                     <div class="content-img">
                         <img src="https://images.pexels.com/photos/1374542/pexels-photo-1374542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                             class="card-img-top" alt="...">
@@ -140,7 +141,7 @@
                     <div class="card-body myCard">
                         <p class="card-text cardBody" data-translate="4photo">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
+                        <a href="./views/lessons.html" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
                     </div>
                 </div>
             </div>
@@ -151,7 +152,7 @@
     <div class="parallax">
         <div class="card-parallax">
             <div class="card text-center bg-transparent text-white h-100">
-                <div class="card-body bg-transparent d-flex justify-content-center align-items-center flex-column">
+                <div class="card-body bg-transparent d-flex justify-content-center align-items-center flex-column wow fadeInUp" data-wow-duration="3s" data-wow-delay=".2s">
                     <h2 class="card-title" data-translate="porpuse">My job is to serve</h2>
                     <p class="card-text lead" data-translate="mission">That you know how to deepen Jesus is my great
                         goal.</p>
@@ -169,7 +170,7 @@
             <!-- Grid row-->
             <div class="row">
                 <!-- Grid column -->
-                <div class="col-md-12 py-5 d-flex justify-content-center align-items-center">
+                <div class="col-md-12 py-5 d-flex justify-content-center align-items-center wow flipInX" data-wow-duration="3s" data-wow-delay="1s">
                     <div class="my-5">
                         <!-- Facebook -->
                         <a class="fb-ic">
@@ -202,13 +203,13 @@
             <!-- Grid row-->
             <hr>
             <!-- Second Row -->
-            <form action="php/sendEmail.php" method="POST" class="my-5">
+            <form method="post" action="/php/sendEmail.php" class="my-5 wow fadeIn" data-wow-duration="2s">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-xs-12">
                         <h3 class="text-danger" data-translate="comments">Tell us what you think of the website.</h3>
 
                         <div class="form-group">
-                            <textarea name="suggestions" id="suggestions" cols="100" rows="7" class="form-control form-contact"
+                            <textarea type="text" name="suggestions" id="suggestions" cols="100" rows="7" class="form-control form-contact"
                                 placeholder="Suggestions"></textarea>
                         </div>
                     </div>
@@ -252,6 +253,7 @@
     <script src="./js/translation/jqueryTranslator.min.js"></script>
     <script src="./js/popper/umd/popper.min.js"></script>
     <script src="./js/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/wow/wow.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

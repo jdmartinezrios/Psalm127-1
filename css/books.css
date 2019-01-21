@@ -1,10 +1,8 @@
-/* footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-} */
+footer.page-footer .footer-copyright {
+  overflow: hidden;
+  margin: auto;
+  background-color: rgba(128,0,0, .9);   
+}
 
 .loader {
     position: absolute;

@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="../assets/please-wait/js/please-wait.css">
     <link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/css/font-awesome.min.css ">
+    <link rel="stylesheet" href="../css/animate.css/animate.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/lessons.css">
 </head>
 
-<body>
+<body onload="OnInit();" class="animated fadeIn">
     <!-- Section of header -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(128,0,0)">
         <a class="navbar-brand" href="../index.html">
-            <!-- <span class="font-weight-bold">Psalm</span><span class="disabled">127-1</span> -->
+            <!-- <span class="font-weight-bold-bold">Psalm</span><span class="disabled">127-1</span> -->
             <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/969/1573016969_2f91ff63-3035-41da-a665-d1efd145bc1b.png?cb=1547190880"
                 alt="" height="30" width="60">
         </a>
@@ -30,13 +31,13 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item active" id="nav1">
                     <a class="nav-link" href="../index.html" data-translate="home">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="nav2">
                     <a class="nav-link" href="./books.html" data-translate="books">Books</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="nav3">
                     <a class="nav-link" href="#" data-translate="lesson">Lessons</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -44,15 +45,18 @@
                         aria-haspopup="true" aria-expanded="false" data-translate="language">
                         Language
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#" id="English2">English</a>
+                    <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item position-relative" id="English2" href="#">English <img src="../assets/images/usa.png"
+                                class="img-flag"></a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" id="Spanish2">Spanish</a>
+                        <a class="dropdown-item position-relative" id="Spanish2" href="#">Spanish <img src="../assets/images/colombia.png"
+                                class="img-flag"></a>
                     </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control search mr-sm-2" type="search" id="placeholder" placeholder="Search" aria-label="Search">
+                <input class="form-control search mr-sm-2" type="search" id="placeholder" placeholder="Search"
+                    aria-label="Search">
                 <button class="btn btn-outline-light search-button my-2 my-sm-0" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
@@ -61,27 +65,30 @@
     </nav>
     <!-- End Header -->
     <!-- Main -->
-    <div class="container-fluid my-4" style="min-height: calc(100vh - 100px)">
+    <div class="container-fluid my-4" style="min-height: calc(100vh - 80px)">
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-12">
-                <div class="list-group" id="list-tab" role="tablist">
+            <div class="col-lg-3 col-md-3 col-sm-12 columns">
+                <div class="list-group myList shadow-lg" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
                         href="#list-home" role="tab" aria-controls="home" data-translate="home">Home</a>
                     <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile"
-                        role="tab" aria-controls="profile"><span data-translate="lesson1">Lesson 1</span><span class="badge badge-danger float-right">4</span></a>
+                        role="tab" aria-controls="profile" onclick="showContent()"><span data-translate="lesson1">Lesson
+                            1</span><span class="badge badge-danger float-right">12</span></a>
                     <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages"
-                        role="tab" aria-controls="messages"><span data-translate="lesson2">Lesson 2</span><span class="badge badge-danger float-right">4</span></a>
+                        role="tab" aria-controls="messages" onclick="showContent()"><span data-translate="lesson2">Lesson
+                            2</span><span class="badge badge-danger float-right">20</span></a>
                     <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings"
-                        role="tab" aria-controls="settings"><span data-translate="lesson3">Lesson 3</span><span class="badge badge-danger float-right">4</span></a>
-                    <a class="list-group-item list-group-item-action" id="list-lesson4-list" data-toggle="list" href="#list-lesson4"
+                        role="tab" aria-controls="settings" onclick="showContent()"><span data-translate="lesson3">Lesson
+                            3</span><span class="badge badge-danger float-right">12</span></a>
+                    <!-- <a class="list-group-item list-group-item-action" id="list-lesson4-list" data-toggle="list" href="#list-lesson4"
                         role="tab" aria-controls="settings"><span data-translate="lesson4">Lesson 4 </span><span class="badge badge-danger float-right">4</span></a>
                     <a class="list-group-item list-group-item-action" id="list-lesson5-list" data-toggle="list" href="#list-lesson5"
                         role="tab" aria-controls="settings"><span data-translate="lesson5">Lesson 5</span><span class="badge badge-danger float-right">4</span></a>
                     <a class="list-group-item list-group-item-action" id="list-lesson6-list" data-toggle="list" href="#list-lesson6"
-                        role="tab" aria-controls="settings"><span data-translate="lesson6">Lesson 6</span><span class="badge badge-danger float-right">4</span></a>
+                        role="tab" aria-controls="settings"><span data-translate="lesson6">Lesson 6</span><span class="badge badge-danger float-right">4</span></a> -->
                 </div>
             </div>
-            <div class="col-lg-9 col-md-9 col-sm-12">
+            <div class="col-lg-9 col-md-9 col-sm-12 columns">
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                         <h2 class="text-danger" data-translate="allLessons">All Lessons</h2>
@@ -91,376 +98,668 @@
                             harum soluta esse commodi excepturi!</p>
                     </div>
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                        <h2 class="text-danger" data-translate="lesson1">Lesson 1</h2>
+                        <h2 class="text-danger"><span data-translate="lesson1">Lesson 1</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="py-2">
-                        <div class="d-flex justify-content-center align-items-center flex-wrap">
+                        <div class="pdfs">
+                            <div>
+                                <div class="loader" id="loader"></div>
+                                <div id="pdfView" class="shadow-lg"></div>
+                            </div>
+                        </div>
+                        <div class="content-lessons shadow-lg">
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1231230/pexels-photo-1231230.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment
+                                            </span> <span class="font-weight-bold">#1</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(1)">View</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1116302/pexels-photo-1116302.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment</span>
+                                            <span class="font-weight-bold">#2</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(2)">View</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/818252/pexels-photo-818252.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment</span>
+                                            <span class="font-weight-bold">#3</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(3)">View</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1374542/pexels-photo-1374542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment</span>
+                                            <span class="font-weight-bold">#4</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(4)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment</span>
+                                            <span class="font-weight-bold">#5</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(5)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment</span>
+                                            <span class="font-weight-bold">#6</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(6)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment</span>
+                                            <span class="font-weight-bold">#7</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(7)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment</span>
+                                            <span class="font-weight-bold">#8</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(8)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment</span>
+                                            <span class="font-weight-bold">#9</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(9)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment</span>
+                                            <span class="font-weight-bold">#10</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(10)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment</span>
+                                            <span class="font-weight-bold">#11</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(11)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great Commandment</span>
+                                            <span class="font-weight-bold">#12</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(12)">View</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <nav aria-label="Page navigation example" class="ml-3">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(1)">1</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(2)">2</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(3)">3</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(4)">4</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(5)">5</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(6)">6</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(7)">7</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(8)">8</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(9)">9</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(10)">10</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(11)">11</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(12)">12</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                        <h2 class="text-danger" data-translate="lesson2">Lesson 2</h2>
+                        <h2 class="text-danger"><span data-translate="lesson2">Lesson 2</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="py-2">
-                        <div class="d-flex justify-content-center align-items-center flex-wrap">
+                        <div class="pdfs">
+                            <div>
+                                <div class="loader" id="loader2"></div>
+                                <div id="pdfView2" class="shadow-lg"></div>
+                            </div>
+                        </div>
+                        <div class="content-lessons">
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1231230/pexels-photo-1231230.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#1</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(13)">View</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1116302/pexels-photo-1116302.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#2</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(14)">View</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/818252/pexels-photo-818252.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#3</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(15)">View</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1374542/pexels-photo-1374542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#4</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(16)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#5</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(17)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#6</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(18)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#7</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(19)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#8</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(20)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#9</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(21)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#10</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(22)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#11</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(23)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#12</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(24)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#13</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(25)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#14</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(26)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#15</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(27)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#16</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(28)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#17</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(29)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#18</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(20)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#19</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(31)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the mount</span>
+                                            <span class="font-weight-bold">#20</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(32)">View</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <nav aria-label="Page navigation example" class="ml-3">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(13)">1</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(14)">2</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(15)">3</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(16)">4</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(17)">5</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(18)">6</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(19)">7</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(20)">8</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(21)">9</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(22)">10</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(23)">11</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(24)">12</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(25)">13</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(26)">14</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(27)">15</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(28)">16</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(29)">17</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(30)">18</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(31)">19</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(32)">20</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                     <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                        <h2 class="text-danger" data-translate="lesson3">Lesson 3</h2>
+                        <h2 class="text-danger"><span data-translate="lesson3">Lesson 3</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="py-2">
-                        <div class="d-flex justify-content-center align-items-center flex-wrap">
+                        <div class="pdfs">
+                            <div>
+                                <div class="loader" id="loader3"></div>
+                                <div id="pdfView3" class="shadow-lg"></div>
+                            </div>
+                        </div>
+                        <div class="content-lessons">
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1231230/pexels-photo-1231230.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"> View</a>
+                                        <p class="card-text"><span data-translate="lesson3">Revelations</span> <span
+                                                class="font-weight-bold">#1</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(33)">View</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1116302/pexels-photo-1116302.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
+                                        <p class="card-text"><span data-translate="lesson3">Revelations</span> <span
+                                                class="font-weight-bold">#2</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(34)">View</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/818252/pexels-photo-818252.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
+                                        <p class="card-text"><span data-translate="lesson3">Revelations</span> <span
+                                                class="font-weight-bold">#3</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(35)">View</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1374542/pexels-photo-1374542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                            class="card-img-top" alt="...">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
+                                        <p class="card-text"><span data-translate="lesson3">Revelations</span> <span
+                                                class="font-weight-bold">#4</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(36)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson3">Revelations</span> <span
+                                                class="font-weight-bold">#5</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(37)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson3">Revelations</span> <span
+                                                class="font-weight-bold">#6</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(38)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson3">Revelations</span> <span
+                                                class="font-weight-bold">#7</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(39)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson3">Revelations</span> <span
+                                                class="font-weight-bold">#8</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(40)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson3">Revelations</span> <span
+                                                class="font-weight-bold">#9</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(41)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson3">Revelations</span> <span
+                                                class="font-weight-bold">#10</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(42)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson3">Revelations</span> <span
+                                                class="font-weight-bold">#11</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(43)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span>Revelations</span> <span class="font-weight-bold">#12</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show" onclick="showPdf(44)">View</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="list-lesson4" role="tabpanel" aria-labelledby="list-lesson4-list">
-                        <h2 class="text-danger" data-translate="lesson4">Lesson 4</h2>
-                        <hr class="py-2">
-                        <div class="d-flex justify-content-center align-items-center flex-wrap">
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1231230/pexels-photo-1231230.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1116302/pexels-photo-1116302.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/818252/pexels-photo-818252.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1374542/pexels-photo-1374542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="list-lesson5" role="tabpanel" aria-labelledby="list-lesson5-list">
-                        <h2 class="text-danger" data-translate="lesson5">Lesson 5</h2>
-                        <hr class="py-2">
-                        <div class="d-flex justify-content-center align-items-center flex-wrap">
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1231230/pexels-photo-1231230.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1116302/pexels-photo-1116302.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/818252/pexels-photo-818252.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1374542/pexels-photo-1374542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="list-lesson6" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger" data-translate="lesson6">Lesson 6</h2>
-                        <hr class="py-2">
-                        <div class="d-flex justify-content-center align-items-center flex-wrap">
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1231230/pexels-photo-1231230.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1116302/pexels-photo-1116302.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/818252/pexels-photo-818252.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="https://images.pexels.com/photos/1374542/pexels-photo-1374542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                            class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <nav aria-label="Page navigation example" class="ml-3">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(33)">1</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(34)">2</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(35)">3</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(36)">4</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(37)">5</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(38)">6</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(39)">7</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(40)">8</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(41)">9</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(42)">10</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(43)">11</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(44)">12</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -468,20 +767,27 @@
     </div>
     <!-- End Main -->
     <!-- Footer -->
-    <footer class="page-footer font-small bg-light shadow-lg">
+    <footer class="page-footer bg-light shadow-lg">
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 text-light">© 2019 Copyright:
-            <a>David Helm</a>
+        <div class="footer-copyright text-center py-1 px-3 text-light">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/969/1573016969_2f91ff63-3035-41da-a665-d1efd145bc1b.png?cb=1547190880"
+                        alt="" height="30" width="60">
+                </a>
+                <a>© 2019 Copyright: David Helm.</a>
+            </div>
         </div>
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
     <script type="text/javascript" src="../assets/please-wait/js/please-wait.js"></script>
     <script src="../js/jquery/dist/jquery.min.js"></script>
-    <script src="../js/translation/jqueryTranslator.min.js"></script>   
+    <script src="../js/pdf/pdfobject.min.js"></script>
+    <script src="../js/translation/jqueryTranslator.min.js"></script>
     <script src="../js/popper/umd/popper.min.js"></script>
     <script src="../js/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../js/books.js"></script> 
+    <script src="../js/lessons.js"></script>
 </body>
 
 </html>

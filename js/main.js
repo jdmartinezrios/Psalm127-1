@@ -1,4 +1,9 @@
 function OnInit() {
+    document.querySelector('video').playbackRate = 0.8;
+    new WOW().init();    
+    $('#nav2').removeClass('active');
+    $('#nav1').addClass('active');
+    $('#nav3').removeClass('active');   
     var intro;
     if (localStorage.getItem('language') === 'spanish') {
         $('[data-translate]').jqTranslate('json/index', {
@@ -25,9 +30,13 @@ function OnInit() {
     });
 
     setTimeout(() => {
+        window.scrollTo(0, 0);
+    },0);  
+    setTimeout(() => {        
         window.loading_screen.finish();
     }, 4000);
 }
+
 
 $('#Spanish').on('click', function (event) {
     (() => {

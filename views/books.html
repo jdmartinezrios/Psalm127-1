@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="../assets/please-wait/js/please-wait.css">
     <link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/css/font-awesome.min.css ">
+    <link rel="stylesheet" href="../css/animate.css/animate.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/books.css">
 </head>
 
-<body onload="OnInit();">    
+<body onload="OnInit();" class="animated fadeIn">
     <!-- Section of header -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(128,0,0)">
         <a class="navbar-brand" href="../index.html">
@@ -30,13 +31,13 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item active" id="nav1">
                     <a class="nav-link" href="../index.html" data-translate="home">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="nav2">
                     <a class="nav-link" href="#" data-translate="books">Books</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="nav3">
                     <a class="nav-link" href="./lessons.html" data-translate="lesson">Lessons</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -44,10 +45,12 @@
                         aria-haspopup="true" aria-expanded="false" data-translate="language">
                         Language
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#" id="English2">English</a>
+                    <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item position-relative" id="English2" href="#">English <img src="../assets/images/usa.png"
+                                class="img-flag"></a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" id="Spanish2">Spanish</a>
+                        <a class="dropdown-item position-relative" id="Spanish2" href="#">Spanish <img src="../assets/images/colombia.png"
+                                class="img-flag"></a>
                     </div>
                 </li>
             </ul>
@@ -64,117 +67,147 @@
     <!-- Main -->
     <div class="container-fluid my-4" style="min-height: calc(100vh - 100px)">
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-12">
-                <div class="list-group" id="list-tab" role="tablist">
+            <div class="col-lg-3 col-md-3 col-sm-12 columns">
+                <div class="list-group myList shadow-lg" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
                         href="#list-home" role="tab" aria-controls="home" data-translate="home">Home</a>
                     <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile"
-                        role="tab" aria-controls="profile" onclick="showPdf(1)"><span data-translate="chapter">Lesson 1</span><span class="badge badge-danger float-right">I</span></a>
+                        role="tab" aria-controls="profile" onclick="showPdf(1)"><span data-translate="introduction">Lesson
+                            1</span></a>
                     <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages"
-                        role="tab" aria-controls="messages" onclick="showPdf(2)"><span data-translate="chapter">Lesson 2</span><span class="badge badge-danger float-right">II</span></a>
+                        role="tab" aria-controls="messages" onclick="showPdf(2)"><span data-translate="chapter">Lesson
+                            2</span><span class="badge badge-danger float-right">I</span></a>
                     <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings"
-                        role="tab" aria-controls="settings" onclick="showPdf(3)"><span data-translate="chapter">Lesson 3</span><span class="badge badge-danger float-right">III</span></a>
+                        role="tab" aria-controls="settings" onclick="showPdf(3)"><span data-translate="chapter">Lesson
+                            3</span><span class="badge badge-danger float-right">II</span></a>
                     <a class="list-group-item list-group-item-action" id="list-book4-list" data-toggle="list" href="#list-book4"
-                        role="tab" aria-controls="settings" onclick="showPdf(4)"><span data-translate="chapter">Lesson 4 </span><span class="badge badge-danger float-right">IV</span></a>
+                        role="tab" aria-controls="settings" onclick="showPdf(4)"><span data-translate="chapter">Lesson
+                            4 </span><span class="badge badge-danger float-right">III</span></a>
                     <a class="list-group-item list-group-item-action" id="list-book5-list" data-toggle="list" href="#list-book5"
-                        role="tab" aria-controls="settings" onclick="showPdf(5)"><span data-translate="chapter">Lesson 5</span><span class="badge badge-danger float-right">V</span></a>
+                        role="tab" aria-controls="settings" onclick="showPdf(5)"><span data-translate="chapter">Lesson
+                            5</span><span class="badge badge-danger float-right">IV</span></a>
                     <a class="list-group-item list-group-item-action" id="list-book6-list" data-toggle="list" href="#list-book6"
-                        role="tab" aria-controls="settings" onclick="showPdf(6)"><span data-translate="chapter">Lesson 6</span><span class="badge badge-danger float-right">VI</span></a>
+                        role="tab" aria-controls="settings" onclick="showPdf(6)"><span data-translate="chapter">Lesson
+                            6</span><span class="badge badge-danger float-right">V</span></a>
                     <a class="list-group-item list-group-item-action" id="list-book7-list" data-toggle="list" href="#list-book7"
-                        role="tab" aria-controls="messages" onclick="showPdf(7)"><span data-translate="chapter">Lesson 2</span><span class="badge badge-danger float-right">VII</span></a>
+                        role="tab" aria-controls="messages" onclick="showPdf(7)"><span data-translate="chapter">Lesson
+                            2</span><span class="badge badge-danger float-right">VI</span></a>
                     <a class="list-group-item list-group-item-action" id="list-book8-list" data-toggle="list" href="#list-book8"
-                        role="tab" aria-controls="settings" onclick="showPdf(8)"><span data-translate="chapter">Lesson 3</span><span class="badge badge-danger float-right">VIII</span></a>
+                        role="tab" aria-controls="settings" onclick="showPdf(8)"><span data-translate="chapter">Lesson
+                            3</span><span class="badge badge-danger float-right">VII</span></a>
                     <a class="list-group-item list-group-item-action" id="list-book9-list" data-toggle="list" href="#list-book9"
-                        role="tab" aria-controls="settings" onclick="showPdf(9)"><span data-translate="chapter">Lesson 4 </span><span class="badge badge-danger float-right">IX</span></a>
-                    <a class="list-group-item list-group-item-action" id="list-book10-list" data-toggle="list" href="#list-book10"
-                        role="tab" aria-controls="settings" onclick="showPdf(10)"><span data-translate="chapter">Lesson 5</span><span class="badge badge-danger float-right">X</span></a>
-                    <a class="list-group-item list-group-item-action" id="list-book11-list" data-toggle="list" href="#list-book11"
-                        role="tab" aria-controls="settings" onclick="showPdf(11)"><span data-translate="chapter">Lesson 6</span><span class="badge badge-danger float-right">XI</span></a>
-                    <a class="list-group-item list-group-item-action" id="list-book12-list" data-toggle="list" href="#list-book12"
-                        role="tab" aria-controls="settings" onclick="showPdf(12)"><span data-translate="chapter">Lesson 5</span><span class="badge badge-danger float-right">XII</span></a>  
+                        role="tab" aria-controls="settings" onclick="showPdf(9)"><span data-translate="chapter">Lesson
+                            4 </span><span class="badge badge-danger float-right">VIII</span></a>
                 </div>
             </div>
-            <div class="col-lg-9 col-md-9 col-sm-12">
+            <div class="col-lg-9 col-md-9 col-sm-12 columns">
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                        <h2 class="text-danger" data-translate="introduction">Introduction</h2>
+                        <h2 class="text-danger" data-translate="welcomePsalm">Psalm 127:1a</h2>
                         <hr class="py-2">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsa unde ratione ea. Vel
                             laborum pariatur vitae, doloremque fugit asperiores itaque nemo tempore nesciunt atque
                             harum soluta esse commodi excepturi!</p>
                     </div>
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                        <h2 class="text-danger" data-translate="chapter1">Chapter 1</h2>
+                        <h2 class="text-danger"><span data-translate="introduction">Introduction</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="pt-2">
                         <div class="loader" id="loader"></div>
                         <div id="pdfView" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                        <h2 class="text-danger" data-translate="chapter2">Chapter 2</h2>
+                        <h2 class="text-danger"><span data-translate="chapter1">Chapter 1</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="pt-2">
                         <div class="loader" id="loader2"></div>
                         <div id="pdfView2" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                        <h2 class="text-danger" data-translate="chapter3">Chapter 3</h2>                      
+                        <h2 class="text-danger"><span data-translate="chapter2">Chapter 2</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="pt-2">
                         <div class="loader" id="loader3"></div>
                         <div id="pdfView3" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book4" role="tabpanel" aria-labelledby="list-lesson4-list">
-                        <h2 class="text-danger" data-translate="chapter4">Chapter 4</h2>                     
+                        <h2 class="text-danger"><span data-translate="chapter3">Chapter 3</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="pt-2">
                         <div class="loader" id="loader4"></div>
                         <div id="pdfView4" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book5" role="tabpanel" aria-labelledby="list-lesson5-list">
-                        <h2 class="text-danger" data-translate="chapter5">Chapter 5</h2>                
+                        <h2 class="text-danger"><span data-translate="chapter4">Chapter 4</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="pt-2">
                         <div class="loader" id="loader5"></div>
                         <div id="pdfView5" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book6" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger" data-translate="chapter6">Chapter 6</h2>
+                        <h2 class="text-danger"><span data-translate="chapter5">Chapter 5</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="pt-2">
                         <div class="loader" id="loader6"></div>
-                        <div id="pdfView6" class="shadow-lg"></div>                        
+                        <div id="pdfView6" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book7" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger" data-translate="chapter7">Chapter 7</h2>
+                        <h2 class="text-danger"><span data-translate="chapter6">Chapter 6</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="pt-2">
                         <div class="loader" id="loader7"></div>
-                        <div id="pdfView7" class="shadow-lg"></div>                        
+                        <div id="pdfView7" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book8" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger" data-translate="chapter8">Chapter 8</h2>
+                        <h2 class="text-danger"><span data-translate="chapter7">Chapter 7</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="pt-2">
                         <div class="loader" id="loader8"></div>
-                        <div id="pdfView8" class="shadow-lg"></div>                       
+                        <div id="pdfView8" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book9" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger" data-translate="chapter9">Chapter 9</h2>
+                        <h2 class="text-danger"><span data-translate="chapter8">Chapter 8</span>
+                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
+                                title="Listen content">
+                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                            </button>
+                        </h2>
                         <hr class="pt-2">
                         <div class="loader" id="loader9"></div>
-                        <div id="pdfView9" class="shadow-lg"></div>                        
+                        <div id="pdfView9" class="shadow-lg"></div>
                     </div>
-                    <div class="tab-pane fade" id="list-book10" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger" data-translate="chapter10">Chapter 10</h2>
-                        <hr class="pt-2">
-                        <div class="loader" id="loader10"></div>
-                        <div id="pdfView10" class="shadow-lg"></div>                       
-                    </div>
-                    <div class="tab-pane fade" id="list-book11" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger" data-translate="chapter11">Chapter 11</h2>
-                        <hr class="pt-2">
-                        <div class="loader" id="loader11"></div>
-                        <div id="pdfView11" class="shadow-lg"></div>                       
-                    </div>
-                    <div class="tab-pane fade" id="list-book12" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger" data-translate="chapter12">Chapter 12</h2>
-                        <hr class="pt-2">
-                        <div class="loader" id="loader12"></div>
-                        <div id="pdfView12" class="shadow-lg"></div>                        
-                    </div>                   
                 </div>
             </div>
         </div>
@@ -183,11 +216,17 @@
     <!-- Footer -->
     <footer class="page-footer font-small bg-light shadow-lg">
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 text-light">© 2019 Copyright:
-            <a>David Helm</a>
+        <div class="footer-copyright text-center py-1 px-3 text-light">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/969/1573016969_2f91ff63-3035-41da-a665-d1efd145bc1b.png?cb=1547190880"
+                        alt="" height="30" width="60">
+                </a>
+                <a>© 2019 Copyright: David Helm.</a>
+            </div>
         </div>
         <!-- Copyright -->
-    </footer>    
+    </footer>
     <!-- Footer -->
     <script type="text/javascript" src="../assets/please-wait/js/please-wait.js"></script>
     <script src="../js/jquery/dist/jquery.min.js"></script>
