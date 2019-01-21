@@ -102,7 +102,7 @@
                         <h2 class="text-danger"><span data-translate="lesson1">Lesson 1</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(1)">
-                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                                <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
                         <hr class="py-2">
@@ -289,7 +289,7 @@
                         <h2 class="text-danger"><span data-translate="lesson2">Lesson 2</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(2)">
-                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                                <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
                         <hr class="py-2">
@@ -580,7 +580,7 @@
                         <h2 class="text-danger"><span data-translate="lesson3">Lesson 3</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(3)">
-                                Listen content &nbsp;<i class="fa fa-headphones"></i>
+                                <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
                         <hr class="py-2">
@@ -788,20 +788,19 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Listen content</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title" id="exampleModalCenterTitle" data-translate="listen">Listen content</h5>
+                    <button type="button" class="close" data-dismiss="modal" onclick="closeAudio()" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <audio controls>
-                        <source src="" type="audio/ogg">
-                        <source src="" type="audio/mpeg">
+                    <audio id="audio" controls autoplay>     
+                        <source id="audios">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" onclick="closeAudio()" data-translate="close">Close</button>
                 </div>
             </div>
         </div>

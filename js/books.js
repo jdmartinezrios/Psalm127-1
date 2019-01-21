@@ -1,4 +1,4 @@
-function OnInit() {  
+function OnInit() {
     var intro;
     if (localStorage.getItem('language') === 'spanish') {
         $('[data-translate]').jqTranslate('../json/index', {
@@ -39,7 +39,7 @@ $('#Spanish2').on('click', function (event) {
             defaultLang: 'en', forceLang: 'es',
             asyncLangLoad: false
         });
-        showPdf(parseInt(localStorage.getItem('index')));
+        showPdf(parseInt(localStorage.getItem('index')));        
         document.getElementById('placeholder').placeholder = "Buscar";
     })();
 });
@@ -51,7 +51,7 @@ $('#English2').on('click', function (event) {
             defaultLang: 'es', forceLang: 'en',
             asyncLangLoad: false
         });
-        showPdf(parseInt(localStorage.getItem('index')));
+        showPdf(parseInt(localStorage.getItem('index')));       
         document.getElementById('placeholder').placeholder = "Search";
     })();
 });
@@ -235,7 +235,7 @@ function showPdf(index) {
         }).fail(() => {
             $('#loader7').show();
         });
-    }  else {
+    } else {
         $('#loader7').show();
         pdf = $('#pdfView7');
         url = "../assets/PDF/Libro/Spanish_Chapter_6_12_28_18.pdf";
@@ -303,6 +303,21 @@ function showPdf(index) {
     }
 }
 
-function listenContent(index) {
+function closeAudio() {
+   document.getElementById('audio').pause();
+}
+
+function listenContent(index) {    
     $('.modal').modal('show');
+    var audio = document.getElementById('audio');
+    switch (index) {
+        case 1: if (getLanguage() == 'english') {
+            $('#audios').attr("src", "../assets/audios/book/English_Chapter_0_Introduction_1_12_19.mp3");
+            audio.load();
+        } else {
+            $('#audios').attr("src", "../assets/audios/libro/Spanish_Chapter_0_Introduction_12_20_18.wav");
+            audio.load();
+        }
+            break;
+    }
 }

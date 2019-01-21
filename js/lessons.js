@@ -26,7 +26,7 @@ function OnInit() {
     $('#nav3').addClass('active');
     $('#nav2').removeClass('active');
     $('.loader').hide();
-    $('.pdfobject-container').addClass('animated fadeIn');    
+    $('.pdfobject-container').addClass('animated fadeIn');
     $('[data-toggle="tooltip"]').tooltip()
 
     setTimeout(() => {
@@ -346,7 +346,7 @@ function showPdf(index) {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView43', "../assets/PDF/Revelations/11_BOR_11_Fall_of_Babylon.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView43', "../assets/PDF/Apocalipsis/Spanish_11_BOR_11_Fall_of_Babylon_Rev_17_18.pdf");
-        }       
+        }
             break;
         case 44: if (getLanguage() == 'english') {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView44', "../assets/PDF/Revelations/12_BOR_12_Victory_and_Restoration_of_All_Things.pdf");
@@ -355,6 +355,10 @@ function showPdf(index) {
         }
             break;
     }
+}
+
+function closeAudio() {
+    document.getElementById('audio').pause();
 }
 
 function listenContent(index) {
