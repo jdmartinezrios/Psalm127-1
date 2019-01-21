@@ -67,6 +67,14 @@ body.pg-loaded > .inner {
     min-width: 100%;
 }
 
+.card-title{
+    max-width: 35em;
+}
+
+.card-text.lead{
+    max-width: 36em;
+}
+
 .content-img{
     background: #000;
 }
