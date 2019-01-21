@@ -301,3 +301,7 @@ function showPdf(index) {
         });
     }
 }
+
+function listenContent(index) {
+    $('.modal').modal('show');
+}

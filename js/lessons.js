@@ -355,3 +355,7 @@ function showPdf(index) {
             break;
     }
 }
+
+function listenContent(index) {
+    $('.modal').modal('show');
+}

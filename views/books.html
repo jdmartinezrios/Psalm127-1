@@ -112,7 +112,7 @@
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                         <h2 class="text-danger"><span data-translate="introduction">Introduction</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(1)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -123,7 +123,7 @@
                     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
                         <h2 class="text-danger"><span data-translate="chapter1">Chapter 1</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(2)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -134,7 +134,7 @@
                     <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
                         <h2 class="text-danger"><span data-translate="chapter2">Chapter 2</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(3)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -145,7 +145,7 @@
                     <div class="tab-pane fade" id="list-book4" role="tabpanel" aria-labelledby="list-lesson4-list">
                         <h2 class="text-danger"><span data-translate="chapter3">Chapter 3</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(4)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -156,7 +156,7 @@
                     <div class="tab-pane fade" id="list-book5" role="tabpanel" aria-labelledby="list-lesson5-list">
                         <h2 class="text-danger"><span data-translate="chapter4">Chapter 4</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(5)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -167,7 +167,7 @@
                     <div class="tab-pane fade" id="list-book6" role="tabpanel" aria-labelledby="list-lesson6-list">
                         <h2 class="text-danger"><span data-translate="chapter5">Chapter 5</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(6)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -178,7 +178,7 @@
                     <div class="tab-pane fade" id="list-book7" role="tabpanel" aria-labelledby="list-lesson6-list">
                         <h2 class="text-danger"><span data-translate="chapter6">Chapter 6</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(7)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -189,7 +189,7 @@
                     <div class="tab-pane fade" id="list-book8" role="tabpanel" aria-labelledby="list-lesson6-list">
                         <h2 class="text-danger"><span data-translate="chapter7">Chapter 7</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(8)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -200,7 +200,7 @@
                     <div class="tab-pane fade" id="list-book9" role="tabpanel" aria-labelledby="list-lesson6-list">
                         <h2 class="text-danger"><span data-translate="chapter8">Chapter 8</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(9)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -228,6 +228,31 @@
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
+    <!-- Modal Media -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Listen content</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <audio controls>
+                        <source src="" type="audio/ogg">
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
     <script type="text/javascript" src="../assets/please-wait/js/please-wait.js"></script>
     <script src="../js/jquery/dist/jquery.min.js"></script>
     <script src="../js/pdf/pdfobject.min.js"></script>

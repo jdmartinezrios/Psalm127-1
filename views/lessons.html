@@ -100,7 +100,7 @@
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                         <h2 class="text-danger"><span data-translate="lesson1">Lesson 1</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(1)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -287,7 +287,7 @@
                     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
                         <h2 class="text-danger"><span data-translate="lesson2">Lesson 2</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(2)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -578,7 +578,7 @@
                     <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
                         <h2 class="text-danger"><span data-translate="lesson3">Lesson 3</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
-                                title="Listen content">
+                                title="Listen content" onclick="listenContent(3)">
                                 Listen content &nbsp;<i class="fa fa-headphones"></i>
                             </button>
                         </h2>
@@ -781,6 +781,31 @@
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
+    <!-- Modal Media -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Listen content</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <audio controls>
+                        <source src="" type="audio/ogg">
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
     <script type="text/javascript" src="../assets/please-wait/js/please-wait.js"></script>
     <script src="../js/jquery/dist/jquery.min.js"></script>
     <script src="../js/pdf/pdfobject.min.js"></script>
