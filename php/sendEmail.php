@@ -9,4 +9,5 @@
   $content = $fullName . "\n" . $message;
 
   mail($admin_email, $subject, $content ,"From:" . $email);
+  header("Location:index.html");
 ?>
