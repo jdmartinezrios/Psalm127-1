@@ -1,10 +1,4 @@
 function OnInit() {
-    $('#nav1').removeClass('active');
-    $('#nav3').addClass('active');
-    $('#nav2').removeClass('active');
-    $('.loader').hide();
-    $('.pdfobject-container').addClass('animated fadeIn');    
-    $('[data-toggle="tooltip"]').tooltip()
     var intro;
     if (localStorage.getItem('language') === 'spanish') {
         $('[data-translate]').jqTranslate('../json/index', {
@@ -27,6 +21,13 @@ function OnInit() {
         backgroundColor: 'rgb(128,0,0)',
         loadingHtml: `<div class='sk-folding-cube'><div class='sk-cube1 sk-cube'></div><div class='sk-cube2 sk-cube'></div><div class='sk-cube4 sk-cube'></div><div class='sk-cube3 sk-cube'></div></div><p class='loading-message' data-translate='intro'>${intro}</p>`
     });
+
+    $('#nav1').removeClass('active');
+    $('#nav3').addClass('active');
+    $('#nav2').removeClass('active');
+    $('.loader').hide();
+    $('.pdfobject-container').addClass('animated fadeIn');    
+    $('[data-toggle="tooltip"]').tooltip()
 
     setTimeout(() => {
         window.loading_screen.finish();
