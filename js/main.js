@@ -61,3 +61,12 @@ $('#English').on('click', function (event) {
         document.getElementById('suggestions').placeholder = "Suggestions";
     })();
 });
+
+$('#know').on('click', () => {
+    $('html,body').animate({scrollTop: 0}, 1800);
+});
+
+$('#welcome').on('click', () => {
+    $('html,body').animate({scrollTop: 0}, 1800);
+});
+
