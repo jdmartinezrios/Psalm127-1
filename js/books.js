@@ -1,35 +1,21 @@
 function OnInit() {
-    var intro;
+    $('#nav1').removeClass('active');
+    $('#nav2').addClass('active');
+    $('#nav3').removeClass('active');
+    $('[data-toggle="tooltip"]').tooltip();
     if (localStorage.getItem('language') === 'spanish') {
         $('[data-translate]').jqTranslate('../json/index', {
             defaultLang: 'en', forceLang: 'es',
             asyncLangLoad: false
         });
         document.getElementById('placeholder').placeholder = "Buscar";
-        intro = "Consideraciones fundamentales antes de ir, iniciar o enviar.";
     } else {
         $('[data-translate]').jqTranslate('../json/index', {
             defaultLang: 'es', forceLang: 'en',
             asyncLangLoad: false
         });
         document.getElementById('placeholder').placeholder = "Search";
-        intro = "Foundational Considerations Before Going, Starting or Sending.";
     }
-
-    window.loading_screen = window.pleaseWait({
-        logo: "https://dewey.tailorbrands.com/production/brand_version_mockup_image/969/1573016969_2f91ff63-3035-41da-a665-d1efd145bc1b.png?cb=1547190880",
-        backgroundColor: 'rgb(128,0,0)',
-        loadingHtml: `<div class='sk-folding-cube'><div class='sk-cube1 sk-cube'></div><div class='sk-cube2 sk-cube'></div><div class='sk-cube4 sk-cube'></div><div class='sk-cube3 sk-cube'></div></div><p class='loading-message' data-translate='intro'>${intro}</p>`
-    });
-
-    $('#nav1').removeClass('active');
-    $('#nav2').addClass('active');
-    $('#nav3').removeClass('active');
-    $('[data-toggle="tooltip"]').tooltip()
-
-    setTimeout(() => {
-        window.loading_screen.finish();
-    }, 4000);
 }
 
 $('#Spanish2').on('click', function (event) {
@@ -39,7 +25,7 @@ $('#Spanish2').on('click', function (event) {
             defaultLang: 'en', forceLang: 'es',
             asyncLangLoad: false
         });
-        showPdf(parseInt(localStorage.getItem('index')));        
+        showPdf(parseInt(localStorage.getItem('index')));
         document.getElementById('placeholder').placeholder = "Buscar";
     })();
 });
@@ -51,7 +37,7 @@ $('#English2').on('click', function (event) {
             defaultLang: 'es', forceLang: 'en',
             asyncLangLoad: false
         });
-        showPdf(parseInt(localStorage.getItem('index')));       
+        showPdf(parseInt(localStorage.getItem('index')));
         document.getElementById('placeholder').placeholder = "Search";
     })();
 });
@@ -304,10 +290,10 @@ function showPdf(index) {
 }
 
 function closeAudio() {
-   document.getElementById('audio').pause();
+    document.getElementById('audio').pause();
 }
 
-function listenContent(index) {    
+function listenContent(index) {
     $('.modal').modal('show');
     var audio = document.getElementById('audio');
     switch (index) {
