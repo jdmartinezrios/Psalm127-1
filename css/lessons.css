@@ -59,6 +59,10 @@ footer.page-footer .footer-copyright {
     font-weight: 400;
   }
 
+  .title-books{
+    margin-top: .5em;
+  }
+
 .modal-header{
     background-color: rgb(128,0,0) !important;
     color: #fff !important;

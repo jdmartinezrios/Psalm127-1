@@ -44,7 +44,9 @@ footer.page-footer .footer-copyright {
     color: #000;
     font-weight: 500;
   }
-
+  .title-books{
+    margin-top: .5em;
+  }
   .title-books,
   .title-books span {
     color: rgb(196, 122, 122);
