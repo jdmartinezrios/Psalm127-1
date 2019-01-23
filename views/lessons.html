@@ -48,10 +48,10 @@
                         Language
                     </a>
                     <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item position-relative" id="English2" href="#">English <img src="../assets/images/usa.png"
+                        <a class="dropdown-item position-relative" id="English3" href="#">English <img src="../assets/images/usa.png"
                                 class="img-flag"></a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item position-relative" id="Spanish2" href="#">Spanish <img src="../assets/images/colombia.png"
+                        <a class="dropdown-item position-relative" id="Spanish3" href="#">Spanish <img src="../assets/images/colombia.png"
                                 class="img-flag"></a>
                     </div>
                 </li>
@@ -72,7 +72,7 @@
             <div class="col-lg-3 col-md-3 col-sm-12 columns">
                 <div class="list-group myList shadow-lg" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
-                        href="#list-home" role="tab" aria-controls="home" data-translate="home">Home</a>
+                        href="#list-home" role="tab" aria-controls="home" data-translate="home">Home <i class="fa fa-clipboard float-right pt-1 pr-1"></i></a>
                     <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile"
                         role="tab" aria-controls="profile" onclick="showContent()"><span data-translate="lesson1">Lesson
                             1</span><span class="badge badge-danger float-right">12</span></a>
@@ -93,19 +93,20 @@
             <div class="col-lg-9 col-md-9 col-sm-12 columns">
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                        <h2 class="text-danger" data-translate="allLessons">All Lessons</h2>
+                        <h3 class="text-danger title-books" data-translate="allLessons">All Lessons</h3>
                         <hr class="py-2">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsa unde ratione ea. Vel
+                        <p data-translate="3photo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsa unde ratione ea. Vel
                             laborum pariatur vitae, doloremque fugit asperiores itaque nemo tempore nesciunt atque
                             harum soluta esse commodi excepturi!</p>
+                            <a role="button" data-toggle="list" href="#list-profile" id="reading" class="btn btn-outline-danger"><span data-translate="continueRead">Continue Reading</span> &nbsp; <i class="fa fa-external-link"></i></a>
                     </div>
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                        <h2 class="text-danger"><span data-translate="lesson1">Lesson 1</span>
+                        <h3 class="text-danger title-books"><span data-translate="lesson1">Lesson 1</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(1)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="py-2">
                         <div class="pdfs">
                             <div>
@@ -287,12 +288,12 @@
                         </nav>
                     </div>
                     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                        <h2 class="text-danger"><span data-translate="lesson2">Lesson 2</span>
+                        <h3 class="text-danger title-books"><span data-translate="lesson2">Lesson 2</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(2)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="py-2">
                         <div class="pdfs">
                             <div>
@@ -578,12 +579,12 @@
                         </nav>
                     </div>
                     <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                        <h2 class="text-danger"><span data-translate="lesson3">Lesson 3</span>
+                        <h3 class="text-danger title-books"><span data-translate="lesson3">Lesson 3</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(3)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="py-2">
                         <div class="pdfs">
                             <div>
@@ -794,8 +795,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <audio id="audio" controls autoplay>     
+                <div class="modal-body"><audio id="audio" controls autoplay>     
                         <source id="audios">
                         Your browser does not support the audio element.
                     </audio>

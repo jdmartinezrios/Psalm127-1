@@ -29,11 +29,26 @@ footer.page-footer .footer-copyright {
   .close{
     color: #fff !important;
   }
+
+  .btn-outline-danger:hover span{
+    color: #fff;
+  }
   
   .modal-body{
     justify-content: center;
     align-items: center;
     display: flex;
+  }
+
+  .list-group-item-action{
+    color: #000;
+    font-weight: 500;
+  }
+
+  .title-books,
+  .title-books span {
+    color: rgb(196, 122, 122);
+    font-weight: 400;
   }
 
   @-webkit-keyframes spin {

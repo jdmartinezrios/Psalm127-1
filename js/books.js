@@ -42,6 +42,10 @@ $('#English2').on('click', function (event) {
     })();
 });
 
+$('#reading').on('click', () => {
+    $('#list-profile-list').click();
+});
+
 function getLanguage() {
     return localStorage.getItem('language');
 }
@@ -302,6 +306,70 @@ function listenContent(index) {
             audio.load();
         } else {
             $('#audios').attr("src", "../assets/audios/libro/Spanish_Chapter_0_Introduction_12_20_18.wav");
+            audio.load();
+        }
+            break;
+        case 2: if (getLanguage() == 'english') {
+            $('#audios').attr("src", "../assets/audios/book/English_Chapter_1_11_17_17.mp3");
+            audio.load();
+        } else {
+            $('#audios').attr("src", "../assets/audios/libro/Spanish_Chapter_1_12_20_18.wav");
+            audio.load();
+        }
+            break;
+        case 3: if (getLanguage() == 'english') {
+            $('#audios').attr("src", "../assets/audios/book/English_Chapter_2_11_19_17.mp3");
+            audio.load();
+        } else {
+            $('#audios').attr("src", "../assets/audios/libro/Spanish_Chapter_2_12_27_18.wav");
+            audio.load();
+        }
+            break;
+        case 4: if (getLanguage() == 'english') {
+            $('#audios').attr("src", "../assets/audios/book/English_Chapter_3_12_1_17.mp3");
+            audio.load();
+        } else {
+            $('#audios').attr("src", "../assets/audios/libro/Spanish_Chapter_3_12_27_18.wav");
+            audio.load();
+        }
+            break;
+        case 5: if (getLanguage() == 'english') {
+            $('#audios').attr("src", "../assets/audios/book/English_Chapter_4_12_8_17.mp3");
+            audio.load();
+        } else {
+            $('#audios').attr("src", "../assets/audios/libro/Spanish_Chapter_4_12_28_18.wav");
+            audio.load();
+        }
+            break;
+        case 6: if (getLanguage() == 'english') {
+            $('#audios').attr("src", "../assets/audios/book/English_Chapter_5_12_9_17.mp3");
+            audio.load();
+        } else {
+            $('#audios').attr("src", "../assets/audios/libro/Spanish_Chapter_5_12_28_18.wav");
+            audio.load();
+        }
+            break;
+        case 7: if (getLanguage() == 'english') {
+            $('#audios').attr("src", "../assets/audios/book/English_Chapter_6_12_11_17.mp3");
+            audio.load();
+        } else {
+            $('#audios').attr("src", "../assets/audios/libro/Spanish_Chapter_6_12_28_18.wav");
+            audio.load();
+        }
+            break;
+        case 8: if (getLanguage() == 'english') {
+            $('#audios').attr("src", "../assets/audios/book/English_Chapter_7_12_14_17.mp3");
+            audio.load();
+        } else {
+            $('#audios').attr("src", "../assets/audios/libro/Spanish_Chapter_7_12_29_18.wav");
+            audio.load();
+        }
+            break;
+        case 9: if (getLanguage() == 'english') {
+            $('#audios').attr("src", "../assets/audios/book/English_Chapter_8_12_15_17.mp3");
+            audio.load();
+        } else {
+            $('#audios').attr("src", "../assets/audios/libro/Spanish_Chapter_8_12_29_18.wav");
             audio.load();
         }
             break;

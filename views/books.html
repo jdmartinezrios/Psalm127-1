@@ -72,10 +72,10 @@
             <div class="col-lg-3 col-md-3 col-sm-12 columns">
                 <div class="list-group myList shadow-lg" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
-                        href="#list-home" role="tab" aria-controls="home" data-translate="home">Home</a>
+                        href="#list-home" role="tab" aria-controls="home" data-translate="home">Home <i class="fa fa-bookmark float-right pt-1"></i></a>
                     <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile"
                         role="tab" aria-controls="profile" onclick="showPdf(1)"><span data-translate="introduction">Lesson
-                            1</span></a>
+                            1</span> <i class="fa fa-book float-right pt-1"></i></a>
                     <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages"
                         role="tab" aria-controls="messages" onclick="showPdf(2)"><span data-translate="chapter">Lesson
                             2</span><span class="badge badge-danger float-right">I</span></a>
@@ -105,107 +105,106 @@
             <div class="col-lg-9 col-md-9 col-sm-12 columns">
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                        <h2 class="text-danger" data-translate="welcomePsalm">Psalm 127:1a</h2>
-                        <hr class="py-2">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsa unde ratione ea. Vel
-                            laborum pariatur vitae, doloremque fugit asperiores itaque nemo tempore nesciunt atque
-                            harum soluta esse commodi excepturi!</p>
+                        <h3 class="text-danger title-books" data-translate="welcomePsalm">Psalm 127:1a</h3>
+                        <hr class="py-2">                      
+                        <p data-translate="introPsalm">It is easy to see why Jesus had to be a carpenter. His Father loved to build, and demonstrated His magnificent blue-collar attributes in three major projects. The first was what many mistakenly call Noah’s Ark… it was actually God’s. The divine instructions were detailed and Noah followed them perfectly, and in so doing provided everything that was necessary for the remnant of God’s creation to be saved as He judged everybody and everything else. The second was the Tent of Meeting. Once again, God’s heavenly anointed craftsmen followed God’s amazingly specific plans to produce a mobile sanctuary for men to meet and interact with God. The third and final earthly structure was His temple. From the foundation to the finishing trim, Solomon duplicated the explicit blueprints drawn by the Almighty Architect Himself.</p>
+                        <a role="button" href="#list-profile" data-toggle="list" id="reading" class="btn btn-outline-danger"><span data-translate="continueRead">Continue Reading</span> &nbsp; <i class="fa fa-external-link"></i></a>
                     </div>
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                        <h2 class="text-danger"><span data-translate="introduction">Introduction</span>
+                        <h3 class="text-danger title-books"><span data-translate="introduction">Introduction</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(1)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="pt-2">
                         <div class="loader" id="loader"></div>
                         <div id="pdfView" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                        <h2 class="text-danger"><span data-translate="chapter1">Chapter 1</span>
+                        <h3 class="text-danger title-books"><span data-translate="chapter1">Chapter 1</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(2)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="pt-2">
                         <div class="loader" id="loader2"></div>
                         <div id="pdfView2" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                        <h2 class="text-danger"><span data-translate="chapter2">Chapter 2</span>
+                        <h3 class="text-danger title-books"><span data-translate="chapter2">Chapter 2</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(3)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="pt-2">
                         <div class="loader" id="loader3"></div>
                         <div id="pdfView3" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book4" role="tabpanel" aria-labelledby="list-lesson4-list">
-                        <h2 class="text-danger"><span data-translate="chapter3">Chapter 3</span>
+                        <h3 class="text-danger title-books"><span data-translate="chapter3">Chapter 3</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(4)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="pt-2">
                         <div class="loader" id="loader4"></div>
                         <div id="pdfView4" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book5" role="tabpanel" aria-labelledby="list-lesson5-list">
-                        <h2 class="text-danger"><span data-translate="chapter4">Chapter 4</span>
+                        <h3 class="text-danger title-books"><span data-translate="chapter4">Chapter 4</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(5)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="pt-2">
                         <div class="loader" id="loader5"></div>
                         <div id="pdfView5" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book6" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger"><span data-translate="chapter5">Chapter 5</span>
+                        <h3 class="text-danger title-books"><span data-translate="chapter5">Chapter 5</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(6)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="pt-2">
                         <div class="loader" id="loader6"></div>
                         <div id="pdfView6" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book7" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger"><span data-translate="chapter6">Chapter 6</span>
+                        <h3 class="text-danger title-books"><span data-translate="chapter6">Chapter 6</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(7)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="pt-2">
                         <div class="loader" id="loader7"></div>
                         <div id="pdfView7" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book8" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger"><span data-translate="chapter7">Chapter 7</span>
+                        <h3 class="text-danger title-books"><span data-translate="chapter7">Chapter 7</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(8)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="pt-2">
                         <div class="loader" id="loader8"></div>
                         <div id="pdfView8" class="shadow-lg"></div>
                     </div>
                     <div class="tab-pane fade" id="list-book9" role="tabpanel" aria-labelledby="list-lesson6-list">
-                        <h2 class="text-danger"><span data-translate="chapter8">Chapter 8</span>
+                        <h3 class="text-danger title-books"><span data-translate="chapter8">Chapter 8</span>
                             <button class="btn btn-outline-danger float-right" data-toggle="tooltip" data-placement="top"
                                 title="Listen content" onclick="listenContent(9)">
                                 <span data-translate="listen">Listen content</span> &nbsp;<i class="fa fa-headphones"></i>
                             </button>
-                        </h2>
+                        </h3>
                         <hr class="pt-2">
                         <div class="loader" id="loader9"></div>
                         <div id="pdfView9" class="shadow-lg"></div>

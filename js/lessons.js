@@ -20,7 +20,7 @@ function OnInit() {
     }
 }
 
-$('#Spanish2').on('click', function (event) {
+$('#Spanish3').on('click', function (event) {
     (() => {
         localStorage.setItem('language', 'spanish');
         $('[data-translate]').jqTranslate('../json/index', {
@@ -32,7 +32,7 @@ $('#Spanish2').on('click', function (event) {
     })();
 });
 
-$('#English2').on('click', function (event) {
+$('#English3').on('click', function (event) {
     (() => {
         localStorage.setItem('language', 'english');
         $('[data-translate]').jqTranslate('../json/index', {
@@ -43,6 +43,11 @@ $('#English2').on('click', function (event) {
         document.getElementById('placeholder').placeholder = "Search";
     })();
 });
+
+$('#reading').on('click', () => {
+    $('#list-profile-list').click();
+});
+
 
 function showContent() {
     $('.content-lessons').show().addClass('animated fadeIn');

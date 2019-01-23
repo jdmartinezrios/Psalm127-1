@@ -44,6 +44,21 @@ footer.page-footer .footer-copyright {
     color: #fff !important;
   }
 
+  .btn-outline-danger:hover span{
+    color: #fff;
+  }
+
+  .list-group-item-action{
+    color: #000;
+    font-weight: 500;
+  }
+
+  .title-books, 
+  .title-books span {
+    color: rgb(128,0,0);
+    font-weight: 400;
+  }
+
 .modal-header{
     background-color: rgb(128,0,0) !important;
     color: #fff !important;
