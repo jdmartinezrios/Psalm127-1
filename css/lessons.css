@@ -4,6 +4,17 @@ footer.page-footer .footer-copyright {
     background-color: rgba(128,0,0, .9);       
 }
 
+.myList {
+  height: 100% !important;
+  border: 1px solid rgba(0,0,0,.125) !important;
+  border-radius: .25rem !important;
+}
+
+#list-home{
+  overflow-y: auto;
+  height: calc(100vh - 80px);
+}
+
 .content-lessons{   
     overflow-x: scroll;
     flex-wrap: nowrap;

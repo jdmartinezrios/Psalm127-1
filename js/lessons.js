@@ -52,6 +52,7 @@ $('#reading').on('click', () => {
 function showContent() {
     $('.content-lessons').show().addClass('animated fadeIn');
     $('.pdfs').hide();
+    $('#collapseLinks').collapse('toggle');
 }
 
 function getLanguage() {

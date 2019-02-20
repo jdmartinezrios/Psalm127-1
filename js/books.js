@@ -50,7 +50,12 @@ function getLanguage() {
     return localStorage.getItem('language');
 }
 
+function toggleMenu() {
+    $('#collapseLinks').collapse('toggle');
+}
+
 function showPdf(index) {
+    $('#collapseLinks').collapse('toggle');
     localStorage.setItem('index', index.toString());
     var pdf;
     var url;
