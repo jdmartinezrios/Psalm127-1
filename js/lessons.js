@@ -119,7 +119,7 @@ function showPdf(index) {
         }
             break;
         case 7: if (getLanguage() == 'english') {
-            assingFileSelector('#loader', '#pdfView', 'pdfView7', "../assets/PDF/Primer_Gran_Mandamiento/Spanish_7_20081107_Loving_God_with_All_Our_Strength_TFC07.pdf");
+            assingFileSelector('#loader', '#pdfView', 'pdfView7', "../assets/PDF/Primer_Gran_Mandamiento/7_20081107_Loving_God_with_All_Our_Strength_TFC07.pdf");
         } else {
             assingFileSelector('#loader', '#pdfView', 'pdfView7', "../assets/PDF/Primer_Gran_Mandamiento/Spanish_7_20081107_Loving_God_with_All_Our_Strength_TFC07.pdf");
         }

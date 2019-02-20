@@ -87,7 +87,8 @@ function showPdf(index) {
         }).fail(() => {
             $('#loader').show();
         });
-    } if (index == 2 && getLanguage() == 'english') {
+    } 
+    if (index == 2 && getLanguage() == 'english') {
         $('#loader2').show();
         pdf = $('#pdfView2');
         url = "../assets/PDF/Book/English_Chapter_1_11_17_17.pdf";
@@ -113,7 +114,8 @@ function showPdf(index) {
         }).fail(() => {
             $('#loader2').show();
         });
-    } if (index == 3 && getLanguage() == 'english') {
+    } 
+    if (index == 3 && getLanguage() == 'english') {
         $('#loader3').show();
         pdf = $('#pdfView3');
         url = "../assets/PDF/Book/English_Chapter_2_11_19_17.pdf";
@@ -139,7 +141,8 @@ function showPdf(index) {
         }).fail(() => {
             $('#loader3').show();
         });
-    } if (index == 4 && getLanguage() == 'english') {
+    } 
+    if (index == 4 && getLanguage() == 'english') {
         $('#loader4').show();
         pdf = $('#pdfView4');
         url = "../assets/PDF/Book/English_Chapter_3_12_1_17.pdf";
@@ -165,7 +168,8 @@ function showPdf(index) {
         }).fail(() => {
             $('#loader4').show();
         });
-    } if (index == 5 && getLanguage() == 'english') {
+    } 
+    if (index == 5 && getLanguage() == 'english') {
         $('#loader5').show();
         pdf = $('#pdfView5');
         url = "../assets/PDF/Book/English_Chapter_4_12_8_17.pdf";
@@ -191,7 +195,8 @@ function showPdf(index) {
         }).fail(() => {
             $('#loader5').show();
         });
-    } if (index == 6 && getLanguage() == 'english') {
+    } 
+    if (index == 6 && getLanguage() == 'english') {
         $('#loader6').show();
         pdf = $('#pdfView6');
         url = "../assets/PDF/Book/English_Chapter_5_12_9_17.pdf";
@@ -217,7 +222,8 @@ function showPdf(index) {
         }).fail(() => {
             $('#loader6').show();
         });
-    } if (index == 7 && getLanguage() == 'english') {
+    } 
+    if (index == 7 && getLanguage() == 'english') {
         $('#loader7').show();
         pdf = $('#pdfView7');
         url = "../assets/PDF/Book/English_Chapter_6_12_11_17.pdf";
@@ -243,7 +249,8 @@ function showPdf(index) {
         }).fail(() => {
             $('#loader7').show();
         });
-    } if (index == 8 && getLanguage() == 'english') {
+    } 
+    if (index == 8 && getLanguage() == 'english') {
         $('#loader8').show();
         pdf = $('#pdfView8');
         url = '../assets/PDF/Book/English_Chapter_7_12_14_17.pdf';
@@ -269,7 +276,8 @@ function showPdf(index) {
         }).fail(() => {
             $('#loader8').show();
         });
-    } if (index == 9 && getLanguage() == 'english') {
+    } 
+    if (index == 9 && getLanguage() == 'english') {
         $('#loader9').show();
         pdf = $('#pdfView9');
         url = '../assets/PDF/Book/English_Chapter_8_12_15_17.pdf';
