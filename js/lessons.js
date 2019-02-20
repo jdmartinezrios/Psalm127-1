@@ -3,6 +3,9 @@ function OnInit() {
     $('#nav3').addClass('active');
     $('#nav2').removeClass('active');
     $('.loader').hide();
+    $('#listen').hide();
+    $('#listen2').hide();
+    $('#listen3').hide();
     $('.pdfobject-container').addClass('animated fadeIn');
     $('[data-toggle="tooltip"]').tooltip();
     if (localStorage.getItem('language') === 'spanish') {
@@ -52,6 +55,9 @@ $('#reading').on('click', () => {
 function showContent() {
     $('.content-lessons').show().addClass('animated fadeIn');
     $('.pdfs').hide();
+    $('#listen').hide();
+    $('#listen2').hide();
+    $('#listen3').hide();
     $('#collapseLinks').collapse('toggle');
 }
 
@@ -78,6 +84,9 @@ function getTimeFile(file, selector) {
 }
 
 function showPdf(index) {
+    $('#listen').show();
+    $('#listen2').show();
+    $('#listen3').show();
     $('.content-lessons').hide().removeClass('animated fadeIn');
     $('.pdfs').show('slow');
     localStorage.setItem('index', index.toString());
