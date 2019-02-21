@@ -5,9 +5,8 @@
   $message = $_POST["suggestions"];
   $fullName = $name . ' ' . $lastName;
   $email = $_POST["email"];
-  $subject = "Contact";
-  $content = $fullName . "\n" . $message;
+  $subject = "Contact Web site Psalm127:1a";
+  $content = $fullName . "\n" . $email . "\n" . $message;
 
-  mail($admin_email, $subject, $content ,"From:" . $email);
-  header("Location:../index.html");
+  mail($admin_email, $subject, $content ,"From:" . $email); 
 ?>

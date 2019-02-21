@@ -24,6 +24,35 @@ function OnInit() {
     setTimeout(() => {
         window.scrollTo(0, 0);
     },0);  
+
+    //Send mail
+    var form = $('#form-contact');
+
+    $(form).submit(() => {
+        event.preventDefault();
+        var formData = $(form).serialize();
+        $.ajax({
+            type: 'POST',
+            url: './php/sendEmail.php',
+            data: formData
+        }).done(() => {
+            if (returnLanguage() === 'english') {
+                window.alert('Thanks for your contribution');
+            } else {
+                window.alert('Gracias por tu aporte');
+            }
+        }).fail(() => {
+            if (returnLanguage() === 'english') {
+                window.alert('Error when sending email');
+            } else {
+                window.alert('Error al enviar correo');
+            }
+        })
+    })
+}
+
+function returnLanguage() {
+    return localStorage.getItem('language');
 }
 
 
