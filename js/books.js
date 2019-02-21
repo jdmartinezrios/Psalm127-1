@@ -8,13 +8,13 @@ function OnInit() {
             defaultLang: 'en', forceLang: 'es',
             asyncLangLoad: false
         });
-        document.getElementById('placeholder').placeholder = "Buscar";
+        document.getElementById('placeholder').placeholder = "Buscar";        
     } else {
         $('[data-translate]').jqTranslate('../json/index', {
             defaultLang: 'es', forceLang: 'en',
             asyncLangLoad: false
         });
-        document.getElementById('placeholder').placeholder = "Search";
+        document.getElementById('placeholder').placeholder = "Search";        
     }
 }
 
@@ -26,7 +26,7 @@ $('#Spanish2').on('click', function (event) {
             asyncLangLoad: false
         });
         showPdf(parseInt(localStorage.getItem('index')));
-        document.getElementById('placeholder').placeholder = "Buscar";
+        document.getElementById('placeholder').placeholder = "Buscar";        
     })();
 });
 
@@ -38,7 +38,7 @@ $('#English2').on('click', function (event) {
             asyncLangLoad: false
         });
         showPdf(parseInt(localStorage.getItem('index')));
-        document.getElementById('placeholder').placeholder = "Search";
+        document.getElementById('placeholder').placeholder = "Search";        
     })();
 });
 

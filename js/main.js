@@ -7,16 +7,14 @@ function OnInit() {
             asyncLangLoad: false
         });
         document.getElementById('placeholder').placeholder = "Buscar";
-        document.getElementById('suggestions').placeholder = "Sugerencias";
-        intro = "Consideraciones fundamentales antes de ir, iniciar o enviar.";
+        document.getElementById('suggestions').placeholder = "Sugerencias";        
     } else {
         $('[data-translate]').jqTranslate('json/index', {
             defaultLang: 'es', forceLang: 'en',
             asyncLangLoad: false
         });
         document.getElementById('placeholder').placeholder = "Search";
-        document.getElementById('suggestions').placeholder = "Suggestions";
-        intro = "Foundational Considerations Before Going, Starting or Sending.";
+        document.getElementById('suggestions').placeholder = "Suggestions";       
     } 
   
     $('#nav2').removeClass('active');
