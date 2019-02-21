@@ -30,6 +30,8 @@ footer.page-footer .footer-copyright {
 .modal-header{
     background-color: rgb(128,0,0) !important;
     color: #fff !important;
+    border-top-left-radius: 0 !important; 
+    border-top-right-radius: 0 !important;
 }
 
   .close{

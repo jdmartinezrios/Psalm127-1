@@ -68,7 +68,7 @@
     </nav>
     <!-- End Header -->
     <!-- Main -->
-    <div class="container-fluid my-4" style="min-height: calc(100vh - 90px)">
+    <div class="container-fluid my-4" style="min-height: calc(100vh - 80px)">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-12 columns">
                 <div class="d-none d-sm-none d-md-block d-lg-block d-xl-block h-100">
@@ -99,8 +99,8 @@
                     <div class="collapse" id="collapseLinks">
                         <div class="list-group myList shadow-lg" id="list-tab" role="tablist">
                             <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list"
-                                href="#list-home" role="tab" aria-controls="home" data-translate="home" onclick="showContent()">Home <i
-                                    class="fa fa-clipboard float-right pt-1 pr-1"></i></a>
+                                href="#list-home" role="tab" aria-controls="home" data-translate="home"
+                                onclick="showContent()">Home <i class="fa fa-clipboard float-right pt-1 pr-1"></i></a>
                             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
                                 href="#list-profile" role="tab" aria-controls="profile" onclick="showContent()"><span
                                     data-translate="lesson1">Lesson
@@ -137,12 +137,27 @@
                             &nbsp; <i class="fa fa-external-link"></i></a>
                     </div>
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                        <h3 class="text-danger title-books"><span data-translate="lesson1">Lesson 1</span>
-                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
-                                data-placement="top" id="listen" title="Listen content" onclick="listenContent(1)">
-                                <span data-translate="listen">Listen content</span> &nbsp;<i
-                                    class="fa fa-headphones"></i>
-                            </button>
+                        <h3 class="text-danger title-books d-flex justify-content-between flex-wrap"><span
+                                data-translate="lesson1">Lesson 1</span>
+                            <div id="listen" class="button-options">
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="Listen to notes" onclick="listenContent('notes')">
+                                    <span data-translate="listenNotes">Listen to notes</span> &nbsp;<i
+                                        class="fa fa-headphones"></i>
+                                </button>
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="Listen to preaching" id="preaching"
+                                    onclick="listenContent('preaching')">
+                                    <span data-translate="listenPreaching">Listen to preaching</span> &nbsp;<i
+                                        class="fa fa-headphones"></i>
+                                </button>
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="See preaching" id="preaching6"
+                                    onclick="listenContent('Seepreaching')">
+                                    <span data-translate="seePreaching">See preaching</span> &nbsp;<i
+                                        class="fa fa-play"></i>
+                                </button>
+                            </div>
                         </h3>
                         <hr class="py-2">
                         <div class="pdfs">
@@ -349,12 +364,27 @@
                         </nav>
                     </div>
                     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                        <h3 class="text-danger title-books"><span data-translate="lesson2">Lesson 2</span>
-                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
-                                data-placement="top" id="listen2" title="Listen content" onclick="listenContent(2)">
-                                <span data-translate="listen">Listen content</span> &nbsp;<i
-                                    class="fa fa-headphones"></i>
-                            </button>
+                        <h3 class="text-danger title-books d-flex justify-content-between flex-wrap"><span
+                                data-translate="lesson2">Lesson 2</span>
+                            <div id="listen2" class="button-options">
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="Listen to notes" onclick="listenContent('notes')">
+                                    <span data-translate="listenNotes">Listen to notes</span> &nbsp;<i
+                                        class="fa fa-headphones"></i>
+                                </button>
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="Listen to preaching" id="preaching2"
+                                    onclick="listenContent('preaching')">
+                                    <span data-translate="listenPreaching">Listen to preaching</span> &nbsp;<i
+                                        class="fa fa-headphones"></i>
+                                </button>
+                                <!-- <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="See preaching" id="preaching5"
+                                    onclick="listenContent('Seepreaching')">
+                                    <span data-translate="seePreaching">See preaching</span> &nbsp;<i
+                                        class="fa fa-play"></i>
+                                </button> -->
+                            </div>
                         </h3>
                         <hr class="py-2">
                         <div class="pdfs">
@@ -681,12 +711,27 @@
                         </nav>
                     </div>
                     <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                        <h3 class="text-danger title-books"><span data-translate="lesson3">Lesson 3</span>
-                            <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
-                                data-placement="top" id="listen3" title="Listen content" onclick="listenContent(3)">
-                                <span data-translate="listen">Listen content</span> &nbsp;<i
-                                    class="fa fa-headphones"></i>
-                            </button>
+                        <h3 class="text-danger title-books d-flex justify-content-between flex-wrap"><span
+                                data-translate="lesson3">Lesson 3</span>
+                            <div id="listen3" class="button-options">
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="Listen to notes" onclick="listenContent('notes')">
+                                    <span data-translate="listenNotes">Listen to notes</span> &nbsp;<i
+                                        class="fa fa-headphones"></i>
+                                </button>
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="Listen to preaching" id="preaching3"
+                                    onclick="listenContent('preaching')">
+                                    <span data-translate="listenPreaching">Listen to preaching</span> &nbsp;<i
+                                        class="fa fa-headphones"></i>
+                                </button>
+                                <!-- <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="See preaching" id="preaching4"
+                                    onclick="listenContent('Seepreaching')">
+                                    <span data-translate="seePreaching">See preaching</span> &nbsp;<i
+                                        class="fa fa-play"></i>
+                                </button> -->
+                            </div>
                         </h3>
                         <hr class="py-2">
                         <div class="pdfs">
@@ -891,7 +936,8 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle" data-translate="listen">Listen content</h5>
+                    <h5 class="modal-title" id="exampleModalCenterTitle" data-translate="listenNotes">Listen to notes
+                    </h5>
                     <button type="button" class="close" data-dismiss="modal" onclick="closeAudio()" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -909,6 +955,56 @@
         </div>
     </div>
     <!-- End Modal -->
+    <!-- Modal Media 2-->
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle" data-translate="listenPreaching">Listen to
+                        preaching</h5>
+                    <button type="button" class="close" data-dismiss="modal" onclick="closeAudio()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body"><audio id="audio2" controls autoplay>
+                        <source id="audios2">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" onclick="closeAudio()"
+                        data-translate="close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal 2-->
+    <!-- Modal Media 3-->
+    <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle" data-translate="seePreaching">See preaching
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" onclick="closeVideo()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body"><video id="video" width="700" controls autoplay>
+                        <source id="videos">
+                        Your browser does not support the audio element.
+                    </video>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" onclick="closeVideo()"
+                        data-translate="close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal 3-->
     <!-- Footer -->
     <footer class="page-footer bg-light shadow-lg">
         <!-- Copyright -->
