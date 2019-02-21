@@ -14,10 +14,19 @@
     <link rel="stylesheet" href="./css/css/font-awesome.min.css ">
     <link rel="stylesheet" href="./css/animate.css/animate.min.css">
     <link rel="stylesheet" href="./css/main.css">
-    <script type="text/javascript" src="./assets/please-wait/js/please-wait.js"></script>                  
+    <script type="text/javascript" src="./assets/please-wait/js/please-wait.js"></script>
 </head>
 
-<body onload="OnInit();" class="animated">    
+<body onload="OnInit();" class="animated">
+    <script>
+        var intro;
+        if (localStorage.getItem('language') === 'english') {
+            intro = "Foundational Considerations Before Going, Starting or Sending.";
+        } else {
+            intro = "Consideraciones fundamentales antes de ir, iniciar o enviar.";
+        }
+        window.loading_screen = window.pleaseWait({ logo: 'https://dewey.tailorbrands.com/production/brand_version_mockup_image/876/1625381876_8656482f-b3ac-4e03-9a2b-8611c51f382c.png?cb=1548545214', backgroundColor: 'rgb(128,0,0)', loadingHtml: `<div class='sk-folding-cube'><div class='sk-cube1 sk-cube'></div><div class='sk-cube2 sk-cube'></div><div class='sk-cube4 sk-cube'></div><div class='sk-cube3 sk-cube'></div></div><p class='loading-message' data-translate='intro'>${intro}</p>` }), setTimeout(() => { window.loading_screen.finish() }, 4000);
+    </script>
     <!-- Section of header -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(128,0,0)">
         <a class="navbar-brand" href="index.html">
@@ -33,7 +42,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active" id="nav1">
-                    <a class="nav-link" href="index.html" data-translate="home">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html" data-translate="home">Home <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item" id="nav2">
                     <a class="nav-link" href="views/books.html" data-translate="books">Books</a>
@@ -42,14 +52,16 @@
                     <a class="nav-link" href="views/lessons.html" data-translate="lesson">Lessons</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false" data-translate="language">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-translate="language">
                         Language
                     </a>
                     <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item position-relative" id="English" href="#">English <img src="./assets/images/usa.png" class="img-flag"></a>
+                        <a class="dropdown-item position-relative" id="English" href="#">English <img
+                                src="./assets/images/usa.png" class="img-flag"></a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item position-relative" id="Spanish" href="#">Spanish <img src="./assets/images/colombia.png" class="img-flag"></a>
+                        <a class="dropdown-item position-relative" id="Spanish" href="#">Spanish <img
+                                src="./assets/images/colombia.png" class="img-flag"></a>
                     </div>
                 </li>
             </ul>
@@ -65,21 +77,27 @@
     <!-- End Header -->
     <!-- Main -->
     <div class="content-video">
-        <div class="container position-absolute d-flex justify-content-center align-items-center flex-column" style="z-index: 2000" datas">
-            <h1 class="display-4 text-light text-center" ><span data-translate="welcome" style="font-weight: 500">Welcome</span><br>
+        <div class="container position-absolute d-flex justify-content-center align-items-center flex-column"
+            style="z-index: 2000" datas">
+            <h1 class="display-4 text-light text-center"><span data-translate="welcome"
+                    style="font-weight: 500">Welcome</span><br>
                 <span style="font-size: 32px; position: relative;
-                top: -6px;" data-translate="welcomePsalm">Unless the lord builds the house, the builders labor in vain.</span></h1>
+                top: -6px;" data-translate="welcomePsalm">Unless the lord builds the house, the builders labor in
+                    vain.</span></h1>
             <!-- <p class="lead text-light w-75 text-center" data-translate="psalm">Unless the lord builds the house, the
                 builders labor in vain.</p> -->
             <hr class="my-2">
-            <a class="btn btn-outline-light btn-lg" id="welcome" href="#"role="button" data-translate="seeMore">See more</a>
+            <a class="btn btn-outline-light btn-lg" id="welcome" href="#" role="button" data-translate="seeMore">See
+                more</a>
         </div>
-        <video class="content-into-video" src="./assets/videos/Pexels Videos 1630077.mp4" playsinline autoplay muted loop></video>
+        <video class="content-into-video" src="./assets/videos/Pexels Videos 1630077.mp4" playsinline autoplay muted
+            loop></video>
     </div>
-    <!-- End Main -->   
+    <!-- End Main -->
     <!-- Description of WEBSITE -->
     <div class="container-fluid">
-        <div class="card bg-transparent d-flex justify-content-center align-items-center py-4 text-center" style="border-style: none">
+        <div class="card bg-transparent d-flex justify-content-center align-items-center py-4 text-center"
+            style="border-style: none">
             <h1 class="card-title text-danger" data-translate="titleDedicated">
                 This website is dedicated to
             </h1>
@@ -93,7 +111,8 @@
     <!-- End Description -->
     <!-- Catalogos -->
     <div class="container-fluid mb-5">
-        <h2 class=" text-center w-100 my-5 title-catalogue text-danger" data-translate="recentContent">Recent Content</h2>
+        <h2 class=" text-center w-100 my-5 title-catalogue text-danger" data-translate="recentContent">Recent Content
+        </h2>
         <div class="d-flex justify-content-center align-items-center flex-wrap">
             <div class="col-md-3 d-flex justify-content-center align-items-center">
                 <div class="card shadow-lg mb-3" data5s" style="width: 18rem;">
@@ -102,9 +121,11 @@
                             class="card-img-top" alt="...">
                     </div>
                     <div class="card-body myCard">
-                        <p class="card-text cardBody" data-translate="1photo">Some quick example text to build on the card title and make up the bulk of
+                        <p class="card-text cardBody" data-translate="1photo">Some quick example text to build on the
+                            card title and make up the bulk of
                             the card's content.</p>
-                        <a href="./views/books.html" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
+                        <a href="./views/books.html" class="btn btn-outline-danger" data-translate="seeMore">See
+                            more</a>
                     </div>
                 </div>
             </div>
@@ -115,9 +136,11 @@
                             class="card-img-top" alt="...">
                     </div>
                     <div class="card-body myCard">
-                        <p class="card-text cardBody" data-translate="2photo">Some quick example text to build on the card title and make up the bulk of
+                        <p class="card-text cardBody" data-translate="2photo">Some quick example text to build on the
+                            card title and make up the bulk of
                             the card's content.</p>
-                        <a href="./views/lessons.html" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
+                        <a href="./views/lessons.html" class="btn btn-outline-danger" data-translate="seeMore">See
+                            more</a>
                     </div>
                 </div>
             </div>
@@ -128,9 +151,11 @@
                             class="card-img-top" alt="...">
                     </div>
                     <div class="card-body myCard">
-                        <p class="card-text cardBody" data-translate="3photo">Some quick example text to build on the card title and make up the bulk of
+                        <p class="card-text cardBody" data-translate="3photo">Some quick example text to build on the
+                            card title and make up the bulk of
                             the card's content.</p>
-                        <a href="./views/lessons.html" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
+                        <a href="./views/lessons.html" class="btn btn-outline-danger" data-translate="seeMore">See
+                            more</a>
                     </div>
                 </div>
             </div>
@@ -141,9 +166,11 @@
                             class="card-img-top" alt="...">
                     </div>
                     <div class="card-body myCard">
-                        <p class="card-text cardBody" data-translate="4photo">Some quick example text to build on the card title and make up the bulk of
+                        <p class="card-text cardBody" data-translate="4photo">Some quick example text to build on the
+                            card title and make up the bulk of
                             the card's content.</p>
-                        <a href="./views/lessons.html" class="btn btn-outline-danger" data-translate="seeMore">See more</a>
+                        <a href="./views/lessons.html" class="btn btn-outline-danger" data-translate="seeMore">See
+                            more</a>
                     </div>
                 </div>
             </div>
@@ -211,8 +238,8 @@
                         <h3 class="text-danger" data-translate="comments">Tell us what you think of the website.</h3>
 
                         <div class="form-group">
-                            <textarea type="text" name="suggestions" id="suggestions" cols="100" rows="7" class="form-control form-contact"
-                                placeholder="Suggestions"></textarea>
+                            <textarea type="text" name="suggestions" id="suggestions" cols="100" rows="7"
+                                class="form-control form-contact" placeholder="Suggestions"></textarea>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-xs-12">
@@ -230,7 +257,8 @@
                             <label for="email" class="text-danger" data-translate="email">Email address</label>
                             <input type="text" class="form-control form-contact" id="email" name="email">
                         </div>
-                        <button type="submit" class="btn btn-outline-danger mt-4 btn-md" data-translate="send">Send</button>
+                        <button type="submit" class="btn btn-outline-danger mt-4 btn-md"
+                            data-translate="send">Send</button>
                     </div>
                 </div>
             </form>
@@ -249,13 +277,13 @@
         </div>
         <!-- Copyright -->
     </footer>
-    <!-- Footer -->   
-    <script src="./js/jquery/dist/jquery.min.js"></script> 
-    <script src="./js/translation/jqueryTranslator.min.js"></script>   
-    <script src="./js/starts/start.js"></script>      
+    <!-- Footer -->
+    <script src="./js/jquery/dist/jquery.min.js"></script>
+    <script src="./js/translation/jqueryTranslator.min.js"></script>
     <script src="./js/popper/umd/popper.min.js"></script>
     <script src="./js/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./js/wow/wow.min.js"></script>   
+    <script src="./js/wow/wow.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
+
 </html>

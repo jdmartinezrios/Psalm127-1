@@ -19,6 +19,15 @@
 </head>
 
 <body onload="OnInit();" class="animated fadeIn">
+    <script>
+        var intro;
+        if (localStorage.getItem('language') === 'english') {
+            intro = "Foundational Considerations Before Going, Starting or Sending.";
+        } else {
+            intro = "Consideraciones fundamentales antes de ir, iniciar o enviar.";
+        }
+        window.loading_screen = window.pleaseWait({ logo: 'https://dewey.tailorbrands.com/production/brand_version_mockup_image/876/1625381876_8656482f-b3ac-4e03-9a2b-8611c51f382c.png?cb=1548545214', backgroundColor: 'rgb(128,0,0)', loadingHtml: `<div class='sk-folding-cube'><div class='sk-cube1 sk-cube'></div><div class='sk-cube2 sk-cube'></div><div class='sk-cube4 sk-cube'></div><div class='sk-cube3 sk-cube'></div></div><p class='loading-message' data-translate='intro'>${intro}</p>` }), setTimeout(() => { window.loading_screen.finish() }, 4000);
+    </script>
     <!-- Section of header -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(128,0,0)">
         <a class="navbar-brand" href="../index.html">
@@ -122,9 +131,9 @@
                     </div>
                     <div class="collapse" id="collapseLinks">
                         <div class="list-group myList shadow-lg" id="list-tab" role="tablist">
-                            <a class="list-group-item list-group-item-action" id="list-home-list"
-                                data-toggle="list" href="#list-home" role="tab" aria-controls="home"
-                                data-translate="home" onclick="toggleMenu()">Home <i class="fa fa-bookmark float-right pt-1"></i></a>
+                            <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list"
+                                href="#list-home" role="tab" aria-controls="home" data-translate="home"
+                                onclick="toggleMenu()">Home <i class="fa fa-bookmark float-right pt-1"></i></a>
                             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
                                 href="#list-profile" role="tab" aria-controls="profile" onclick="showPdf(1)"><span
                                     data-translate="introduction">Lesson
@@ -341,7 +350,6 @@
     <script src="../js/jquery/dist/jquery.min.js"></script>
     <script src="../js/pdf/pdfobject.min.js"></script>
     <script src="../js/translation/jqueryTranslator.min.js"></script>
-    <script src="../js/starts/start2.js"></script>
     <script src="../js/popper/umd/popper.min.js"></script>
     <script src="../js/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../js/books.js"></script>
