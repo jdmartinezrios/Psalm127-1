@@ -1,72 +1,81 @@
 footer.page-footer .footer-copyright {
   overflow: hidden;
   margin: auto;
-  background-color: rgba(128,0,0, .9);   
+  background-color: rgba(128, 0, 0, .9);
 }
 
 .myList {
   height: 100% !important;
-  border: 1px solid rgba(0,0,0,.125) !important;
+  border: 1px solid rgba(0, 0, 0, .125) !important;
   border-radius: .25rem !important;
 }
 
 .loader {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border: 8px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 8px solid rgb(128,0,0);
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-  }
-
-.modal-header{
-    background-color: rgb(128,0,0) !important;
-    color: #fff !important;
-    border-top-left-radius: 0 !important; 
-    border-top-right-radius: 0 !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid rgb(128, 0, 0);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
-  .close{
-    color: #fff !important;
-  }
+.modal-header {
+  background-color: rgb(128, 0, 0) !important;
+  color: #fff !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
 
-  .btn-outline-danger:hover span{
-    color: #fff;
-  }
-  
-  .modal-body{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
+.close {
+  color: #fff !important;
+}
 
-  .list-group-item-action{
-    color: #000;
-    font-weight: 500;
-  }
-  .title-books{
-    margin-top: .5em;
-  }
-  .title-books,
-  .title-books span {
-    color: rgb(196, 122, 122);
-    font-weight: 400;
-  }
+.btn-outline-danger:hover span {
+  color: #fff;
+}
 
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+.modal-body {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.list-group-item-action {
+  color: #000;
+  font-weight: 500;
+}
+
+.title-books {
+  margin-top: .5em;
+}
+
+.title-books, .title-books span {
+  color: rgb(196, 122, 122);
+  font-weight: 400;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
   }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta name="decription" content="Religion">
-    <meta name="keywords" content="Lessons Pshalm 127-5">
+    <meta name="description" content="Lessons Psalm 127:1a">
+    <meta name="keywords" content="Lessons Psalm 127:1a">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="autor" content="Juan Martinez">
     <meta charset="UTF-8">
-    <title>Psalm 127:1a</title>
+    <title>Psalm 127:1a - Lessons.</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
     <link rel="stylesheet" href="../assets/please-wait/js/please-wait.css">
     <link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.min.css">
@@ -65,14 +65,7 @@
                                 src="../assets/images/colombia.png" class="img-flag"></a>
                     </div>
                 </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control search mr-sm-2" type="search" id="placeholder" placeholder="Search"
-                    aria-label="Search">
-                <button class="btn btn-outline-light search-button my-2 my-sm-0" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
+            </ul>        
         </div>
     </nav>
     <!-- End Header -->
@@ -387,12 +380,12 @@
                                     <span data-translate="listenPreaching">Listen to preaching</span> &nbsp;<i
                                         class="fa fa-headphones"></i>
                                 </button>
-                                <!-- <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
                                     data-placement="top" title="See preaching" id="preaching5"
                                     onclick="listenContent('Seepreaching')">
                                     <span data-translate="seePreaching">See preaching</span> &nbsp;<i
                                         class="fa fa-play"></i>
-                                </button> -->
+                                </button>
                             </div>
                         </h3>
                         <hr class="py-2">
@@ -734,12 +727,12 @@
                                     <span data-translate="listenPreaching">Listen to preaching</span> &nbsp;<i
                                         class="fa fa-headphones"></i>
                                 </button>
-                                <!-- <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
                                     data-placement="top" title="See preaching" id="preaching4"
                                     onclick="listenContent('Seepreaching')">
                                     <span data-translate="seePreaching">See preaching</span> &nbsp;<i
                                         class="fa fa-play"></i>
-                                </button> -->
+                                </button>
                             </div>
                         </h3>
                         <hr class="py-2">
@@ -941,9 +934,9 @@
     <!-- End Main -->
     <!-- Modal Media -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
+            <div class="modal-content shadow-lg">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalCenterTitle" data-translate="listenNotes">Listen to notes
                     </h5>
@@ -966,13 +959,13 @@
     <!-- End Modal -->
     <!-- Modal Media 2-->
     <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
+            <div class="modal-content shadow-lg">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalCenterTitle" data-translate="listenPreaching">Listen to
                         preaching</h5>
-                    <button type="button" class="close" data-dismiss="modal" onclick="closeAudio()" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" onclick="closeAudio2()" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -982,7 +975,7 @@
                     </audio>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" onclick="closeAudio()"
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" onclick="closeAudio2()"
                         data-translate="close">Close</button>
                 </div>
             </div>
@@ -993,7 +986,7 @@
     <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
+            <div class="modal-content shadow-lg">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalCenterTitle" data-translate="seePreaching">See preaching
                     </h5>
@@ -1001,10 +994,11 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body"><video id="video" width="700" preload controls autoplay>
+                <div class="modal-body"><video id="video" width="700" preload="auto" controls autoplay>
                         <source id="videos">
                         Your browser does not support the audio element.
                     </video>
+                    <iframe id="outvideo" src="lessons.html" style="width: 100%; height: 480px" name="content-video"></iframe>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal" onclick="closeVideo()"
@@ -1030,6 +1024,7 @@
     </footer>
     <!-- Footer -->
     <script src="../js/jquery/dist/jquery.min.js"></script>
+    <script src="../js/jquery/dist/jquery-ui.min.js"></script>
     <script src="../js/pdf/pdfobject.min.js"></script>
     <script src="../js/translation/jqueryTranslator.min.js"></script>
     <script src="../js/popper/umd/popper.min.js"></script>

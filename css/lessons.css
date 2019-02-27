@@ -1,7 +1,7 @@
 footer.page-footer .footer-copyright {
-    overflow: hidden;
-    margin: auto;
-    background-color: rgba(128,0,0, .9);       
+  overflow: hidden;
+  margin: auto;
+  background-color: rgba(128, 0, 0, .9);
 }
 
 #video {
@@ -9,101 +9,106 @@ footer.page-footer .footer-copyright {
   height: auto;
 }
 
-.button-options button{
+.button-options button {
   margin-left: 1em;
 }
 
 .myList {
   height: 100% !important;
-  border: 1px solid rgba(0,0,0,.125) !important;
+  border: 1px solid rgba(0, 0, 0, .125) !important;
   border-radius: .25rem !important;
 }
 
-#list-home{
+#list-home {
   overflow-y: auto;
   height: calc(100vh - 80px);
 }
 
-.content-lessons{   
-    overflow-x: scroll;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;    
+.content-lessons {
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.card .card-img-top{
-    opacity: .9 !important;
-    min-height: 100%;
-    min-width: 100%;
+.card .card-img-top {
+  opacity: .9 !important;
+  min-height: 100%;
+  min-width: 100%;
 }
 
-.content-img{
-    background: #fff !important;
+.content-img {
+  background: #fff !important;
 }
 
 .loader {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border: 8px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 8px solid rgb(128,0,0);
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-  }
-
-  .close{
-    color: #fff !important;
-  }
-
-  .btn-outline-danger:hover span{
-    color: #fff;
-  }
-
-  .list-group-item-action{
-    color: #000;
-    font-weight: 500;
-  }
-
-  .title-books, 
-  .title-books span {
-    color: rgb(128,0,0);
-    font-weight: 400;
-  }
-
-  .title-books{
-    margin-top: .5em;
-  }
-
-.modal-header{
-    background-color: rgb(128,0,0) !important;
-    color: #fff !important;
-    border-top-left-radius: 0 !important; 
-    border-top-right-radius: 0 !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid rgb(128, 0, 0);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
-  
-  .modal-body{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
 
-  
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+.close {
+  color: #fff !important;
+}
 
+.btn-outline-danger:hover span {
+  color: #fff;
+}
+
+.list-group-item-action {
+  color: #000;
+  font-weight: 500;
+}
+
+.title-books, .title-books span {
+  color: rgb(128, 0, 0);
+  font-weight: 400;
+}
+
+.title-books {
+  margin-top: .5em;
+}
+
+.modal-header {
+  background-color: rgb(128, 0, 0) !important;
+  color: #fff !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.modal-body {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

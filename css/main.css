@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
 }
 
-body, h1, h2, h3, h4, h5, button, span, *{
+body, h1, .h1, h2, h3, h4, h5, button, span, *{
     font-weight: 300;
 }
 

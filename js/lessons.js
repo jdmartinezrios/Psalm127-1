@@ -1,4 +1,7 @@
 function OnInit() {
+    $("#exampleModalCenter").draggable();
+    $("#exampleModalCenter2").draggable();
+    if (!localStorage.getItem('language')) { localStorage.setItem('language', 'english') }
     $('#nav1').removeClass('active');
     $('#nav3').addClass('active');
     $('#nav2').removeClass('active');
@@ -11,22 +14,24 @@ function OnInit() {
     if (localStorage.getItem('language') === 'spanish') {
         $('[data-translate]').jqTranslate('../json/index', {
             defaultLang: 'en', forceLang: 'es',
-            asyncLangLoad: false
+            asyncLangLoad: true
         });
-        document.getElementById('placeholder').placeholder = "Buscar";
         $('#preaching').hide();
         $('#preaching2').hide();
         $('#preaching3').hide();
+        $('#preaching4').hide();
+        $('#preaching5').hide();
         $('#preaching6').hide();
     } else {
         $('[data-translate]').jqTranslate('../json/index', {
             defaultLang: 'es', forceLang: 'en',
-            asyncLangLoad: false
+            asyncLangLoad: true
         });
-        document.getElementById('placeholder').placeholder = "Search";
         $('#preaching').show();
         $('#preaching2').show();
         $('#preaching3').show();
+        $('#preaching4').show();
+        $('#preaching5').show();
         $('#preaching6').show();
     }
 }
@@ -39,10 +44,11 @@ $('#Spanish3').on('click', function (event) {
             asyncLangLoad: false
         });
         showPdf(parseInt(localStorage.getItem('index')));
-        document.getElementById('placeholder').placeholder = "Buscar";
         $('#preaching').hide();
         $('#preaching2').hide();
         $('#preaching3').hide();
+        $('#preaching4').hide();
+        $('#preaching5').hide();
         $('#preaching6').hide();
     })();
 });
@@ -55,10 +61,11 @@ $('#English3').on('click', function (event) {
             asyncLangLoad: false
         });
         showPdf(parseInt(localStorage.getItem('index')));
-        document.getElementById('placeholder').placeholder = "Search";
         $('#preaching').show();
         $('#preaching2').show();
         $('#preaching3').show();
+        $('#preaching4').show();
+        $('#preaching5').show();
         $('#preaching6').show();
     })();
 });
@@ -109,6 +116,7 @@ function showPdf(index) {
     localStorage.setItem('index', index.toString());
     switch (index) {
         case 1: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching').show();
             $('#preaching6').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView', "../assets/PDF/First_and_Great_Commandment/1_20080822_Loving_God_The_First_and_Great_Commandment_TFC01.pdf");
@@ -117,6 +125,7 @@ function showPdf(index) {
         }
             break;
         case 2: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching').show();
             $('#preaching6').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView2', "../assets/PDF/First_and_Great_Commandment/2_20080829_Defining_Wholehearted_Love-Four_Spheres_and_Four_Stages_TFC02.pdf");
@@ -125,6 +134,7 @@ function showPdf(index) {
         }
             break;
         case 3: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching').show();
             $('#preaching6').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView3', "../assets/PDF/First_and_Great_Commandment/3_20080912_Defining_Wholehearted_Love_Four_Spheres_TFC03.pdf");
@@ -133,6 +143,7 @@ function showPdf(index) {
         }
             break;
         case 4: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching').show();
             $('#preaching6').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView4', "../assets/PDF/First_and_Great_Commandment/4_20080919_Loving_God_with_All_Our_Mind_TFC04.pdf");
@@ -141,6 +152,7 @@ function showPdf(index) {
         }
             break;
         case 5: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching').show();
             $('#preaching6').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView5', "../assets/PDF/First_and_Great_Commandment/5_20081010_The_Relationship_of_the_First_Commandment_to_the_Second_TFC05.pdf");
@@ -149,6 +161,7 @@ function showPdf(index) {
         }
             break;
         case 6: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView6', "../assets/PDF/First_and_Great_Commandment/6_20081024_Loving_God_with_All_Our_Soul_TFC06.pdf");
         } else {
             assingFileSelector('#loader', '#pdfView', 'pdfView6', "../assets/PDF/Primer_Gran_Mandamiento/Spanish_6_20081024_Loving_God_with_All_Our_Soul_TFC06.pdf");
@@ -157,6 +170,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 7: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching').show();
             $('#preaching6').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView7', "../assets/PDF/First_and_Great_Commandment/7_20081107_Loving_God_with_All_Our_Strength_TFC07.pdf");
@@ -165,6 +179,7 @@ function showPdf(index) {
         }
             break;
         case 8: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching').show();
             $('#preaching6').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView8', "../assets/PDF/First_and_Great_Commandment/8_20081114_End_of_the_Age_Ministry_Paradigm_TFC08.pdf");
@@ -173,6 +188,7 @@ function showPdf(index) {
         }
             break;
         case 9: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching').show();
             $('#preaching6').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView9', "../assets/PDF/First_and_Great_Commandment/9_20081121_Practical_Ways_to_Pursue_the_First_Commandment_TFC09.pdf");
@@ -181,6 +197,7 @@ function showPdf(index) {
         }
             break;
         case 10: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching').show();
             $('#preaching6').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView10', "../assets/PDF/First_and_Great_Commandment/10_20081128_Running_for_the_Prize_Being_Complete_in_Our_Love_TFC10.pdf");
@@ -189,6 +206,7 @@ function showPdf(index) {
         }
             break;
         case 11: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching').show();
             $('#preaching6').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView11', "../assets/PDF/First_and_Great_Commandment/11_20081130_Loving_Jesus_without_Offense_TFC11.pdf");
@@ -197,6 +215,7 @@ function showPdf(index) {
         }
             break;
         case 12: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching').show();
             $('#preaching6').show();
             assingFileSelector('#loader', '#pdfView', 'pdfView12', "../assets/PDF/First_and_Great_Commandment/12_20081205_Cultivating_the_Oil_of_Intimacy_TFC12.pdf");
@@ -205,6 +224,7 @@ function showPdf(index) {
         }
             break;
         case 13: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             $('#preaching6').hide();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView13', "../assets/PDF/Sermon_on_the_Mount/1_20120204_Pursuing_a_Kingdom_Lifestyle_SOM1.pdf");
@@ -214,6 +234,7 @@ function showPdf(index) {
 
             break;
         case 14: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView14', "../assets/PDF/Sermon_on_the_Mount/2_20120211_Overview_of_the_Sermon_on_the_Mount_SOM02.pdf");
         } else {
@@ -222,6 +243,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 15: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView15', "../assets/PDF/Sermon_on_the_Mount/3_20120219_Poverty_of_Spirit-Foundational_Beaititude_SOM03.pdf");
         } else {
@@ -230,6 +252,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 16: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView16', "../assets/PDF/Sermon_on_the_Mount/4_20120311_Mourning_Meekness_and_Spiritual_Hunger_SOM04.pdf");
         } else {
@@ -238,6 +261,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 17: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView17', "../assets/PDF/Sermon_on_the_Mount/5_20120325_Mercy_Purity_Peacemaking_and_Persecution_SOM05.pdf");
         } else {
@@ -246,6 +270,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 18: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView18', "../assets/PDF/Sermon_on_the_Mount/6_20120401_Kingdom_Impact_Being_Salt_and_Light_SOM06.pdf");
         } else {
@@ -254,6 +279,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 19: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView19', "../assets/PDF/Sermon_on_the_Mount/7_20120415_Overcoming_the_Spirit_of_Anger_SOM07.pdf");
         } else {
@@ -262,6 +288,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 20: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView20', "../assets/PDF/Sermon_on_the_Mount/8_20120527_Overcoming_the_Spirit_of_Immorality_SOM08.pdf");
         } else {
@@ -270,6 +297,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 21: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView21', "../assets/PDF/Sermon_on_the_Mount/9_20120603_Honoring_Marriage_and_Our_Commitments_SOM09.pdf");
         } else {
@@ -278,6 +306,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 22: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView22', "../assets/PDF/Sermon_on_the_Mount/10_20120610_Refusing_Retaliation_and_Defensiveness_SOM10.pdf");
         } else {
@@ -286,6 +315,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 23: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView23', "../assets/PDF/Sermon_on_the_Mount/11_20120701_Replacing_Passive_Love_with_Active_Love_SOM11.pdf");
         } else {
             assingFileSelector('#loader2', '#pdfView2', 'pdfView23', "../assets/PDF/Sermon_Del_Monte/Spanish_11_20120701_Replacing_Passive_Love_with_Active_Love_SOM11.pdf");
@@ -294,6 +324,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 24: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView24', "../assets/PDF/Sermon_on_the_Mount/12_20120930_Called_to_Serve_Give_Pray_Fast_and_Bless_SOM12.pdf");
         } else {
@@ -302,6 +333,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 25: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView25', "../assets/PDF/Sermon_on_the_Mount/13_20121014_Being_Taught_to_Pray_by_Jesus.pdf");
         } else {
@@ -310,6 +342,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 26: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView26', "../assets/PDF/Sermon_on_the_Mount/14_20121021_Receiving_the_Fathers_Reward_Financially.pdf");
         } else {
@@ -318,6 +351,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 27: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView27', "../assets/PDF/Sermon_on_the_Mount/15_20121104_Relationships_Forgive_Bless_and_More_SOM15.pdf");
         } else {
@@ -326,6 +360,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 28: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView28', "../assets/PDF/Sermon_on_the_Mount/16_20121125_Loving_Jesus_in_Our_Use_of_Money_SOM16.pdf");
         } else {
@@ -334,6 +369,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 29: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView29', "../assets/PDF/Sermon_on_the_Mount/17_20121207_Overcoming_Anxiety_and_Fear_SOM17.pdf");
         } else {
@@ -342,6 +378,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 30: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView30', "../assets/PDF/Sermon_on_the_Mount/18_20121209_To_Judge_or_Not_to_Judge_SOM18.pdf");
         } else {
@@ -350,6 +387,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 31: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView31', "../assets/PDF/Sermon_on_the_Mount/19_20121214_Seeking_Gods_Help_with_Perseverance_SOM19.pdf");
         } else {
@@ -358,6 +396,7 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 32: if (getLanguage() == 'english') {
+            $('#preaching4').show();
             $('#preaching2').show();
             assingFileSelector('#loader2', '#pdfView2', 'pdfView32', "../assets/PDF/Sermon_on_the_Mount/20_20121216_Being_Wise_and_Great_in_Gods_Eyes_SOM20.pdf");
         } else {
@@ -366,111 +405,142 @@ function showPdf(index) {
             $('#preaching6').hide();
             break;
         case 33: if (getLanguage() == 'english') {
+            $('#preaching4').show();
+            $('#preaching3').show();
             assingFileSelector('#loader3', '#pdfView3', 'pdfView33', "../assets/PDF/Revelations/1_20140207_Introduction_and_Overview_of_the_Book_of Revelation_BOR01_1.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView33', "../assets/PDF/Apocalipsis/Spanish_1_20140207_Introduction_and_Overview_of_the_Book_of_Revelation_BOR01_1.pdf");
         }
             $('#preaching6').hide();
-            $('#preaching3').hide();
             break;
         case 34: if (getLanguage() == 'english') {
+            $('#preaching4').show();
+            $('#preaching3').show();
             assingFileSelector('#loader3', '#pdfView3', 'pdfView34', "../assets/PDF/Revelations/2_20140214_The_Varying _Importance_of_End_Time_Doctrines_BOR02_1.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView34', "../assets/PDF/Apocalipsis/Spanish_2_20140214_The_Varying _Importance_of_End_Time_Doctrines_BOR02_1.pdf");
         }
-            $('#preaching3').hide();
             $('#preaching6').hide();
             break;
         case 35: if (getLanguage() == 'english') {
+            $('#preaching4').show();
+            $('#preaching3').show();
             assingFileSelector('#loader3', '#pdfView3', 'pdfView35', "../assets/PDF/Revelations/3_BOR_03_The_Theme_of_the_book_of_Revelation.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView35', "../assets/PDF/Apocalipsis/Spanish_3_BOR_03_The_Theme_of_the_book_of_Revelation.pdf");
         }
             $('#preaching6').hide();
-            $('#preaching3').hide();
             break;
         case 36: if (getLanguage() == 'english') {
+            $('#preaching4').show();
+            $('#preaching3').show();
             assingFileSelector('#loader3', '#pdfView3', 'pdfView36', "../assets/PDF/Revelations/4_BOR_04_The_Seven_Churches_Called_to_Overcome_Rev_ 2_3.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView36', "../assets/PDF/Apocalipsis/Spanish_4_BOR_04_The_Seven_Churches_Called_to_Overcome_Rev_2_3.pdf");
         }
             $('#preaching6').hide();
-            $('#preaching3').hide();
             break;
         case 37: if (getLanguage() == 'english') {
+            $('#preaching4').show();
+            $('#preaching3').show();
             assingFileSelector('#loader3', '#pdfView3', 'pdfView37', "../assets/PDF/Revelations/5_BOR_05_Father_s_Throne_and_Jesus_Exaltation.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView37', "../assets/PDF/Apocalipsis/Spanish_5_BOR_05__Father_s_Throne_and_Jesus_Exaltation_Rev_4_5_with_blanks.pdf");
         }
             $('#preaching6').hide();
-            $('#preaching3').hide();
             break;
         case 38: if (getLanguage() == 'english') {
+            $('#preaching4').show();
+            $('#preaching3').show();
             assingFileSelector('#loader3', '#pdfView3', 'pdfView38', "../assets/PDF/Revelations/6_BOR_06_Seals_of_Judgment_and_Gods_Protection_Rev_6_7_3.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView38', "../assets/PDF/Apocalipsis/Spanish_6_BOR_06__Seals_of_Judgment_and_God_s_Protection_Rev_6_7_with_blanks.pdf");
         }
             $('#preaching6').hide();
-            $('#preaching3').hide();
             break;
         case 39: if (getLanguage() == 'english') {
+            $('#preaching4').show();
+            $('#preaching3').show();
             assingFileSelector('#loader3', '#pdfView3', 'pdfView39', "../assets/PDF/Revelations/7_BOR_07_The_Trumpets_Judgments_Rev_8_9_1.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView39', "../assets/PDF/Apocalipsis/Spanish_7_BOR_07_The_Trumpet_Judgments_Rev_8_9_with_blanks.pdf");
         }
             $('#preaching6').hide();
-            $('#preaching3').hide();
             break;
         case 40: if (getLanguage() == 'english') {
+            $('#preaching4').show();
+            $('#preaching3').show();
             assingFileSelector('#loader3', '#pdfView3', 'pdfView40', "../assets/PDF/Revelations/8_BOR_08_Prophetic_Ministry_in_End_Times_Rev_10_11.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView40', "../assets/PDF/Apocalipsis/Spanish_8_BOR_08_Prophetic_Ministry_in_End_Times_Rev_10_11_with_blanks.pdf");
         }
             $('#preaching6').hide();
-            $('#preaching3').hide();
             break;
         case 41: if (getLanguage() == 'english') {
+            $('#preaching4').show();
+            $('#preaching3').show();
             assingFileSelector('#loader3', '#pdfView3', 'pdfView41', "../assets/PDF/Revelations/9_BOR_09_2nd_Coming_Rapture_and_War_in_the_Spirit.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView41', "../assets/PDF/Apocalipsis/Spanish_9_BOR_09_2nd_Coming_Rapture_and_War_in_the_Spirit_Rev_11_14_without_blanks.pdf");
         }
             $('#preaching6').hide();
-            $('#preaching3').hide();
             break;
         case 42: if (getLanguage() == 'english') {
+            $('#preaching4').show();
+            $('#preaching3').show();
             assingFileSelector('#loader3', '#pdfView3', 'pdfView42', "../assets/PDF/Revelations/10_20140426_Seven_Bowls_of_Wrath_Rev15_16_SOS10.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView42', "../assets/PDF/Apocalipsis/Spanish_10_20140426_Seven_Bowls_of_Wrath_Rev15_16_SOS10.pdf");
         }
             $('#preaching6').hide();
-            $('#preaching3').hide();
             break;
-        case 43: if (getLanguage() == 'english') {
+        case 43: if (getLanguage() == 'english') {            
             assingFileSelector('#loader3', '#pdfView3', 'pdfView43', "../assets/PDF/Revelations/11_BOR_11_Fall_of_Babylon.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView43', "../assets/PDF/Apocalipsis/Spanish_11_BOR_11_Fall_of_Babylon_Rev_17_18.pdf");
         }
             $('#preaching6').hide();
             $('#preaching3').hide();
+            $('#preaching4').hide();
             break;
         case 44: if (getLanguage() == 'english') {
+            $('#preaching4').show();
+            $('#preaching3').show();
             assingFileSelector('#loader3', '#pdfView3', 'pdfView44', "../assets/PDF/Revelations/12_BOR_12_Victory_and_Restoration_of_All_Things.pdf");
         } else {
             assingFileSelector('#loader3', '#pdfView3', 'pdfView44', "../assets/PDF/Apocalipsis/Spanish_12_BOR_12_Victory_and_the_Restoration_of_All_Things_Rev19_22.pdf");
         }
             $('#preaching6').hide();
-            $('#preaching3').hide();
             break;
     }
 }
 
 function closeAudio() {
     document.getElementById('audio').pause();
+    $("#exampleModalCenter").position({
+        of: $(this),
+        my: 'center',
+        at: 'center'
+    });
+}
+
+function closeAudio2() {
     document.getElementById('audio2').pause();
+    $("#exampleModalCenter2").position({
+        of: $(this),
+        my: 'center',
+        at: 'center'
+    });
 }
 
 function closeVideo() {
     document.getElementById('video').pause();
+    $("#exampleModalCenter3").position({
+        of: $(this),
+        my: 'center',
+        at: 'center'
+    });
+    setUrlView("");
 }
 
 function returnIndexListen() {
@@ -558,7 +628,7 @@ function listenContent(typeListen) {
                 $('#audios').attr("src", "../assets/audios/notes/First_Commandment/Session_10_Running_for_the_Prize_Being_Complete_in_Our_Love.mp3");
                 audio.load();
             } else {
-                $('#audios').attr("src", "../assets/audios/notas/Primer_Y_Gran_Mandamiento/Sesión_10_Corriendo_para_el_Premio_Ser_Completo_en_Nuestro_Amor(Mateo_25).mp3");
+                $('#audios').attr("src", "../assets/audios/notas/Primer_Y_Gran_Mandamiento/Sesión_10_Corriendo_para_el_Premio_Ser_Completo_en_Nuestro_Amor.mp3");
                 audio.load();
             }
                 break;
@@ -566,7 +636,7 @@ function listenContent(typeListen) {
                 $('#audios').attr("src", "../assets/audios/notes/First_Commandment/Session_11_Loving_Jesus_without_Offense_(Matthew_11_6).mp3");
                 audio.load();
             } else {
-                $('#audios').attr("src", "../assets/audios/notas/Primer_Y_Gran_Mandamiento/Sesión_11_Amar_a_Jesús_Sin_Ser_Ofendido_(Mateo_11_6)(Mateo_25).mp3");
+                $('#audios').attr("src", "../assets/audios/notas/Primer_Y_Gran_Mandamiento/Sesión_11_Amar_a_Jesús_Sin_Ser_Ofendido_(Mateo_11_6).mp3");
                 audio.load();
             }
                 break;
@@ -574,7 +644,7 @@ function listenContent(typeListen) {
                 $('#audios').attr("src", "../assets/audios/notes/First_Commandment/Session_12_Cultivating_the_Oil_of_Intimacy_(Matthew_25_1_to_13).mp3");
                 audio.load();
             } else {
-                $('#audios').attr("src", "../assets/audios/notas/Primer_Y_Gran_Mandamiento/Sesión_12_Cultivando_el_Aceite_de_la_Intimidad_(Mateo_25_1_a_13)(Mateo_25).mp3");
+                $('#audios').attr("src", "../assets/audios/notas/Primer_Y_Gran_Mandamiento/Sesión_12_Cultivando_el_Aceite_de_la_Intimidad_(Mateo_25_1_a_13).mp3");
                 audio.load();
             }
                 break;
@@ -968,11 +1038,64 @@ function listenContent(typeListen) {
                 $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/765/566/20121216_Being_Wise_and_Great_in_Gods_Eyes_SOM20_128.mp3");
                 audio2.load();
                 break;
+            case 33:
+                $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/344/803/2014_02_07_2000_FCF_MB.mp3");
+                audio2.load();
+                break;
+            case 34:
+                $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/929/3/2014_02_14_2000_FCF_MB.mp3");
+                audio2.load();
+                break;
+            case 35:
+                $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/909/887/2014_02_28_2000_MB_FCF.mp3");
+                audio2.load();
+                break;
+            case 36:
+                $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/876/919/2014_03_07_2000_MB_FCF.mp3");
+                audio2.load();
+                break;
+            case 37:
+                $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/812/47/2014_03_21_Session5_MikeBickle_EGS.mp3");
+                audio2.load();
+                break;
+            case 38:
+                $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/367/387/2014_03_29_2000_MB_FCF.mp3");
+                audio2.load();
+                break;
+            case 39:
+                $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/353/867/2014_04_04_1800_EGS_MikeBickle_Session7.mp3");
+                audio2.load();
+                break;
+            case 40:
+                $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/636/1018/2014_04_11_2000_MB_FCF.mp3");
+                audio2.load();
+                break;
+            case 41:
+                $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/97/923/2014_04_18_2000_MB_FCF.mp3");
+                audio2.load();
+                break;
+            case 42:
+                $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/52/470/2014_04_26_2000_MB_FCF.mp3");
+                audio2.load();
+                break;
+            case 43:
+                // $('#audios2').attr("src", "../assets/audios/notes/Revelations/Session_11_The_Fall_of_Babylon_(Revelation_17_to_18).mp3");
+                // audio2.load();          
+                break;
+            case 44:
+                $('#audios2').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/100/370/140509-1800-TPR.mp3");
+                audio2.load();
+                break;
         }
     }
     if (typeListen === 'Seepreaching') {
+        $('#exampleModalCenter3').modal({
+            backdrop: 'static'
+        });
         $('#exampleModalCenter3').modal('show');
         var video = document.getElementById('video');
+        $('#outvideo').hide();
+        $('#video').show();
         switch (returnIndexListen()) {
             case 1:
                 $('#videos').attr("src", "http://media2.ihopkc.org.edgesuite.net/IHOP/41/899/20080822_Loving_God_The_First_and_Great_Commandment_TFC01_1000.mp4");
@@ -1022,90 +1145,119 @@ function listenContent(typeListen) {
                 $('#videos').attr("src", "http://media2.ihopkc.org.edgesuite.net/IHOP/43/351/20081205_Cultivating_the_Oil_of_Intimacy_TFC12_1000.mp4");
                 video.load();
                 break;
-            // case 13:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/681/583/20120204_Pursuing_a_Kingdom_Lifestyle_SOM1_128.mp3");
-            //     video.load();
-            //     break;
-            // case 14:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/683/35/20120211_Overview_of_the_Sermon_on_the_Mount_SOM02_128.mp3");
-            //     video.load();
-            //     break;
-            // case 15:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/683/35/20120219_Poverty_of_Spirit-Foundational_Beaititude_SOM03_128.mp3");
-            //     video.load();
-            //     break;
-            // case 16:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/715/267/20120311_Mourning_Meekness_and_Spiritual_Hunger_SOM04_128.mp3");
-            //     video.load();
-            //     break;
-            // case 17:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/715/267/20120325_Mercy_Purity_Peacemaking_and_Persecution_SOM05_128.mp3");
-            //     video.load();
-            //     break;
-            // case 18:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/716/743/20120401_Kingdom_Impact_Being_Salt_and_Light_SOM06_128.mp3");
-            //     video.load();
-            //     break;
-            // case 19:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/718/695/20120415_Overcoming_the_Spirit_of_Anger_SOM07_128.mp3");
-            //     video.load();
-            //     break;
-            // case 20:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/721/123/20120527_Overcoming_the_Spirit_of_Immorality_SOM08_128.mp3");
-            //     video.load();
-            //     break;
-            // case 21:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/721/123/20120603_Honoring_Marriage_and_Our_Commitments_SOM09_128.mp3");
-            //     video.load();
-            //     break;
-            // case 22:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/720/646/20120610_Refusing_Retaliation_and_Defensiveness_SOM10_128.mp3");
-            //     video.load();
-            //     break;
-            // case 23:
-            //     // $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/760/186/20120930_Called_to_Serve__Give_Pray_Fast_and_Bless_SOM12_128.mp3");
-            //     // video.load();
-            //     break;
-            // case 24:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/760/186/20120930_Called_to_Serve__Give_Pray_Fast_and_Bless_SOM12_128.mp3");
-            //     video.load();
-            //     break;
-            // case 25:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/758/735/20121014_Being_Taught_to_Pray_by_Jesus_128.mp3");
-            //     video.load();
-            //     break;
-            // case 26:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/760/686/20121021_Receiving_the_Fathers_Reward_Financially_128.mp3");
-            //     video.load();
-            //     break;
-            // case 27:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/759/211/20121104_Relationships_Forgive_Bless_and_More_SOM15_128.mp3");
-            //     video.load();
-            //     break;
-            // case 28:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/760/687/20121125_Loving_Jesus_in_Our_Use_of_Money_SOM16_128.mp3");
-            //     video.load();
-            //     break;
-            // case 29:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/760/687/20121207_Overcoming_Anxiety_and_Fear_SOM17_128.mp3");
-            //     video.load();
-            //     break;
-            // case 30:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/759/711/20121209_To_Judge_or_Not_to_Judge_SOM18_128.mp3");
-            //     video.load();
-            //     break;
-            // case 31:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/765/67/20121214_Seeking_Gods_Help_with_Perseverance_SOM19_128.mp3");
-            //     video.load();
-            //     break;
-            // case 32:
-            //     $('#videos').attr("src", "https://ihopkcorg-a.akamaihd.net/platform/IHOP/765/566/20121216_Being_Wise_and_Great_in_Gods_Eyes_SOM20_128.mp3");
-            //     video.load();
-            //     break;         
+            case 13:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3247#video");
+                break;
+            case 14:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3250#video");
+                break;
+            case 15:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3251#video");
+                break;
+            case 16:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3320#video");
+                break;
+            case 17:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3326#video");
+                break;
+            case 18:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3328#video");
+                break;
+            case 19:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3333#video");
+                break;
+            case 20:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3350#video");
+                break;
+            case 21:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3352#video");
+                break;
+            case 22:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3354#video");
+                break;
+            case 23:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3360#video");                
+                break;
+            case 24:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3394#video");
+                break;
+            case 25:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3400#video");
+                break;
+            case 26:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3402#video");
+                break;
+            case 27:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3404#video");
+                break;
+            case 28:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3414#video");
+                break;
+            case 29:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3416#video");
+                break;
+            case 30:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3417#video");
+                break;
+            case 31:
+                setUrlView("https://mikebickle.org/watch/?guid=mb_3418#video");
+                break;
+            case 32:
+                setUrlView(" https://mikebickle.org/watch/?guid=mb_3419#video");
+                break;
+            case 33:
+                setUrlView("https://mikebickle.org/watch/?guid=2014_02_07_2000_FCF_MB#video");
+                break;
+            case 34:
+                setUrlView("https://mikebickle.org/watch/?guid=2014_02_14_2000_FCF_MB#video");
+                break;
+            case 35:
+                setUrlView("https://mikebickle.org/watch/?guid=2014_02_28_2000_MB_FCF#video");
+                break;
+            case 36:
+                setUrlView("https://mikebickle.org/watch/?guid=2014_03_07_2000_MB_FCF#video");
+                break;
+            case 37:
+                setUrlView("https://mikebickle.org/watch/?guid=vEup0VZ1YIdj_XES4hOk6VIkagq0W4Uq#video");
+                break;
+            case 38:
+                setUrlView("https://mikebickle.org/watch/?guid=2014_03_29_2000_MB_FCF#video");
+                break;
+            case 39:
+                setUrlView("https://mikebickle.org/watch/?guid=2014_04_04_1800_EGS_MikeBickle_Session7#video");
+                break;
+            case 40:
+                setUrlView("https://mikebickle.org/watch/?guid=2014_04_11_2000_MB_FCF#video");
+                break;
+            case 41:
+                setUrlView("https://mikebickle.org/watch/?guid=2014_04_18_2000_MB_FCF#video");
+                break;
+            case 42:
+                setUrlView("https://mikebickle.org/watch/?guid=2014_04_26_2000_MB_FCF#video");
+                break;
+            case 43:
+                // $('#audios2').attr("src", "../assets/audios/notes/Revelations/Session_11_The_Fall_of_Babylon_(Revelation_17_to_18).mp3");
+                // audio2.load();          
+                break;
+            case 44:
+                setUrlView("https://mikebickle.org/watch/?guid=2014_05_09_1800_MB_FCF#video");
+                break;
         }
     }
 }
 
+function setUrlView(url) {
+    $('#outvideo').show();
+    $('#video').hide();
+    var a = document.createElement('a');
+    document.body.appendChild(a);
+    a.setAttribute('style', 'display: none');
+    a.setAttribute('target', 'content-video');
+    a.href = url;
+    a.click();
+    window.URL.revokeObjectURL(url);
+    a.remove();
+}
 
 function assingIndexListen(index) {
     localStorage.setItem('indexListen', index.toString());

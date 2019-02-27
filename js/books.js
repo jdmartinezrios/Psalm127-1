@@ -1,4 +1,6 @@
-function OnInit() {
+function OnInit() {    
+    if (!localStorage.getItem('language')) { localStorage.setItem('language', 'english') }
+    $(".modal").draggable();
     $('#nav1').removeClass('active');
     $('#nav2').addClass('active');
     $('#nav3').removeClass('active');
@@ -6,15 +8,13 @@ function OnInit() {
     if (localStorage.getItem('language') === 'spanish') {
         $('[data-translate]').jqTranslate('../json/index', {
             defaultLang: 'en', forceLang: 'es',
-            asyncLangLoad: false
-        });
-        document.getElementById('placeholder').placeholder = "Buscar";        
+            asyncLangLoad: true
+        });                       
     } else {
         $('[data-translate]').jqTranslate('../json/index', {
             defaultLang: 'es', forceLang: 'en',
-            asyncLangLoad: false
-        });
-        document.getElementById('placeholder').placeholder = "Search";        
+            asyncLangLoad: true
+        });                  
     }
 }
 
@@ -25,8 +25,7 @@ $('#Spanish2').on('click', function (event) {
             defaultLang: 'en', forceLang: 'es',
             asyncLangLoad: false
         });
-        showPdf(parseInt(localStorage.getItem('index')));
-        document.getElementById('placeholder').placeholder = "Buscar";        
+        showPdf(parseInt(localStorage.getItem('index')));               
     })();
 });
 
@@ -37,8 +36,7 @@ $('#English2').on('click', function (event) {
             defaultLang: 'es', forceLang: 'en',
             asyncLangLoad: false
         });
-        showPdf(parseInt(localStorage.getItem('index')));
-        document.getElementById('placeholder').placeholder = "Search";        
+        showPdf(parseInt(localStorage.getItem('index')));             
     })();
 });
 
@@ -308,9 +306,14 @@ function showPdf(index) {
 
 function closeAudio() {
     document.getElementById('audio').pause();
+    $(".modal").position({
+        of: $(this),
+        my: 'center',
+        at: 'center'
+    });    
 }
 
-function listenContent(index) {
+function listenContent(index) {   
     $('.modal').modal('show');
     var audio = document.getElementById('audio');
     switch (index) {

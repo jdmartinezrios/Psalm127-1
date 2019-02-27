@@ -1,19 +1,18 @@
-function OnInit() {  
+function OnInit() {   
+    if (!localStorage.getItem('language')) { localStorage.setItem('language', 'english') }
     document.querySelector('video').playbackRate = 0.8;
     new WOW().init();   
     if (localStorage.getItem('language') === 'spanish') {
         $('[data-translate]').jqTranslate('json/index', {
             defaultLang: 'en', forceLang: 'es',
-            asyncLangLoad: false
-        });
-        document.getElementById('placeholder').placeholder = "Buscar";
+            asyncLangLoad: true
+        });       
         document.getElementById('suggestions').placeholder = "Sugerencias";        
     } else {
         $('[data-translate]').jqTranslate('json/index', {
             defaultLang: 'es', forceLang: 'en',
-            asyncLangLoad: false
-        });
-        document.getElementById('placeholder').placeholder = "Search";
+            asyncLangLoad: true
+        });              
         document.getElementById('suggestions').placeholder = "Suggestions";       
     } 
   
@@ -62,8 +61,7 @@ $('#Spanish').on('click', function (event) {
         $('[data-translate]').jqTranslate('json/index', {
             defaultLang: 'en', forceLang: 'es',
             asyncLangLoad: false
-        });
-        document.getElementById('placeholder').placeholder = "Buscar";
+        });       
         document.getElementById('suggestions').placeholder = "Sugerencias";
     })();
 });
@@ -74,8 +72,7 @@ $('#English').on('click', function (event) {
         $('[data-translate]').jqTranslate('json/index', {
             defaultLang: 'es', forceLang: 'en',
             asyncLangLoad: false
-        });
-        document.getElementById('placeholder').placeholder = "Search";
+        });        
         document.getElementById('suggestions').placeholder = "Suggestions";
     })();
 });
