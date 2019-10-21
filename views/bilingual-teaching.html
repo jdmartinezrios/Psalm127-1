@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta name="description" content="Lessons Psalm 127:1a">
-    <meta name="keywords" content="Lessons Psalm 127:1a">
+    <meta name="description" content="Bilingual Teaching Psalm 127:1a">
+    <meta name="keywords" content="Bilingual Teaching Psalm 127:1a">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="autor" content="Juan Martinez">
     <meta charset="UTF-8">
-    <title>Psalm 127:1a - Lessons.</title>
+    <title>Psalm 127:1a - Bilingual Teaching.</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
     <link rel="stylesheet" href="../assets/please-wait/js/please-wait.css">
     <link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/css/font-awesome.min.css ">
     <link rel="stylesheet" href="../css/animate.css/animate.min.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/lessons.css">
+    <link rel="stylesheet" href="../css/bilingual-teaching.css">
     <script type="text/javascript" src="../assets/please-wait/js/please-wait.js"></script>
 </head>
 
@@ -67,8 +67,8 @@
                 </li>
                 <!-- NEW UPDATE BUTTON -->
                 <div class="nav-item dropdown bilingual-teaching">
-                    <button type="button" class="btn btn-outline-light" data-translate="bilingual" onclick="window.location.href='./bilingual-teaching.html'">Bilingual
-                        teaching</button>
+                    <button type="button" class="btn btn-outline-light" data-translate="goToHome"
+                        onclick="window.location.href='../index.html'">Go to Home</button>
                 </div>
                 <!-- / -->
             </ul>
@@ -81,21 +81,21 @@
             <div class="col-lg-3 col-md-3 col-sm-12 columns">
                 <div class="d-none d-sm-none d-md-block d-lg-block d-xl-block h-100">
                     <div class="list-group myList shadow-lg" id="list-tab" role="tablist">
-                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+                        <!-- <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
                             href="#list-home" role="tab" aria-controls="home" data-translate="home">Home <i
-                                class="fa fa-clipboard float-right pt-1 pr-1"></i></a>
+                                class="fa fa-clipboard float-right pt-1 pr-1"></i></a> -->
+                        <a class="list-group-item list-group-item-action active" id="list-messages-list"
+                            data-toggle="list" href="#list-messages" role="tab" aria-controls="messages"
+                            onclick="showContent()"><span data-translate="lesson2">Lesson
+                                2</span><span class="badge badge-danger float-right">21</span></a>
                         <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
                             href="#list-profile" role="tab" aria-controls="profile" onclick="showContent()"><span
                                 data-translate="lesson1">Lesson
-                                1</span><span class="badge badge-danger float-right">12</span></a>
-                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
-                            href="#list-messages" role="tab" aria-controls="messages" onclick="showContent()"><span
-                                data-translate="lesson2">Lesson
-                                2</span><span class="badge badge-danger float-right">20</span></a>
+                                1</span><span class="badge badge-danger float-right">0</span></a>
                         <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
                             href="#list-settings" role="tab" aria-controls="settings" onclick="showContent()"><span
                                 data-translate="lesson3">Lesson
-                                3</span><span class="badge badge-danger float-right">12</span></a>
+                                3</span><span class="badge badge-danger float-right">0</span></a>
                     </div>
                 </div>
                 <div class="d-sm-block d-md-none d-lg-none d-xl-none">
@@ -106,9 +106,9 @@
                     </div>
                     <div class="collapse" id="collapseLinks">
                         <div class="list-group myList shadow-lg" id="list-tab" role="tablist">
-                            <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list"
+                            <!-- <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list"
                                 href="#list-home" role="tab" aria-controls="home" data-translate="home"
-                                onclick="showContent()">Home <i class="fa fa-clipboard float-right pt-1 pr-1"></i></a>
+                                onclick="showContent()">Home <i class="fa fa-clipboard float-right pt-1 pr-1"></i></a> -->
                             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
                                 href="#list-profile" role="tab" aria-controls="profile" onclick="showContent()"><span
                                     data-translate="lesson1">Lesson
@@ -127,7 +127,7 @@
             </div>
             <div class="col-lg-9 col-md-9 col-sm-12 columns">
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                    <!-- <div class="tab-pane fade show active" id="list-home" role="tabpanel"
                         aria-labelledby="list-home-list">
                         <h3 class="text-danger title-books" data-translate="allLessons">All Lessons</h3>
                         <hr>
@@ -143,241 +143,15 @@
                             class="btn btn-outline-danger"><span data-translate="continueRead">Continue
                                 Reading</span>
                             &nbsp; <i class="fa fa-external-link"></i></a>
-                    </div>
-                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                        <h3 class="text-danger title-books d-flex justify-content-between flex-wrap"><span
-                                data-translate="lesson1">Lesson 1</span>
-                            <div id="listen" class="button-options">
-                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
-                                    data-placement="top" title="Listen to notes" onclick="listenContent('notes')">
-                                    <span data-translate="listenNotes">Listen to notes</span> &nbsp;<i
-                                        class="fa fa-headphones"></i>
-                                </button>
-                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
-                                    data-placement="top" title="Listen to preaching" id="preaching"
-                                    onclick="listenContent('preaching')">
-                                    <span data-translate="listenPreaching">Listen to preaching</span> &nbsp;<i
-                                        class="fa fa-headphones"></i>
-                                </button>
-                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
-                                    data-placement="top" title="See preaching" id="preaching6"
-                                    onclick="listenContent('Seepreaching')">
-                                    <span data-translate="seePreaching">See preaching</span> &nbsp;<i
-                                        class="fa fa-play"></i>
-                                </button>
-                            </div>
-                        </h3>
-                        <hr class="py-2">
-                        <div class="pdfs">
-                            <div>
-                                <div class="loader" id="loader"></div>
-                                <div id="pdfView" class="shadow-lg"></div>
-                            </div>
-                        </div>
-                        <div class="content-lessons shadow-lg">
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment
-                                            </span> <span class="font-weight-bold">#1</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(1)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment</span>
-                                            <span class="font-weight-bold">#2</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(2)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment</span>
-                                            <span class="font-weight-bold">#3</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(3)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment</span>
-                                            <span class="font-weight-bold">#4</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(4)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment</span>
-                                            <span class="font-weight-bold">#5</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(5)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment</span>
-                                            <span class="font-weight-bold">#6</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(6)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment</span>
-                                            <span class="font-weight-bold">#7</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(7)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment</span>
-                                            <span class="font-weight-bold">#8</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(8)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment</span>
-                                            <span class="font-weight-bold">#9</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(9)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment</span>
-                                            <span class="font-weight-bold">#10</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(10)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment</span>
-                                            <span class="font-weight-bold">#11</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(11)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                <div class="card shadow-lg mb-3" style="width: 18rem;">
-                                    <div class="content-img">
-                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text"><span data-translate="lesson1">First and Great
-                                                Commandment</span>
-                                            <span class="font-weight-bold">#12</span></p>
-                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
-                                            onclick="showPdf(12)">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <nav aria-label="Page navigation example" class="ml-3">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(1)">1</a></li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(2)">2</a></li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(3)">3</a></li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(4)">4</a></li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(5)">5</a></li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(6)">6</a></li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(7)">7</a></li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(8)">8</a></li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(9)">9</a></li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(10)">10</a></li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(11)">11</a></li>
-                                <li class="page-item"><a class="page-link" onclick="showPdf(12)">12</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                    </div> -->
+                    <div class="tab-pane fade show active" id="list-messages" role="tabpanel"
+                        aria-labelledby="list-messages-list">
                         <h3 class="text-danger title-books d-flex justify-content-between flex-wrap"><span
                                 data-translate="lesson2">Lesson 2</span>
                             <div id="listen2" class="button-options">
                                 <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
-                                    data-placement="top" title="Listen to notes" onclick="listenContent('notes')">
-                                    <span data-translate="listenNotes">Listen to notes</span> &nbsp;<i
+                                    data-placement="top" title="Bilingual teaching" onclick="listenContent('notes')">
+                                    <span data-translate="listenClass">Listen to notes</span> &nbsp;<i
                                         class="fa fa-headphones"></i>
                                 </button>
                                 <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
@@ -682,6 +456,20 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson2">Sermon on the
+                                                mount</span>
+                                            <span class="font-weight-bold">#21</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(33)">View</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <nav aria-label="Page navigation example" class="ml-3">
                             <ul class="pagination">
@@ -710,6 +498,7 @@
                                 <li class="page-item"><a class="page-link" onclick="showPdf(30)">18</a></li>
                                 <li class="page-item"><a class="page-link" onclick="showPdf(31)">19</a></li>
                                 <li class="page-item"><a class="page-link" onclick="showPdf(32)">20</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(33)">21</a></li>
                                 <li class="page-item">
                                     <a class="page-link" href="#" aria-label="Next">
                                         <span aria-hidden="true">&raquo;</span>
@@ -717,6 +506,234 @@
                                 </li>
                             </ul>
                         </nav>
+                    </div>
+                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                        <h3 class="text-danger title-books d-flex justify-content-between flex-wrap"><span
+                                data-translate="lesson1">Lesson 1</span>
+                            <div id="listen" class="button-options">
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="Listen to notes" onclick="listenContent('notes')">
+                                    <span data-translate="listenNotes">Listen to notes</span> &nbsp;<i
+                                        class="fa fa-headphones"></i>
+                                </button>
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="Listen to preaching" id="preaching"
+                                    onclick="listenContent('preaching')">
+                                    <span data-translate="listenPreaching">Listen to preaching</span> &nbsp;<i
+                                        class="fa fa-headphones"></i>
+                                </button>
+                                <button class="btn btn-outline-danger float-right" data-toggle="tooltip"
+                                    data-placement="top" title="See preaching" id="preaching6"
+                                    onclick="listenContent('Seepreaching')">
+                                    <span data-translate="seePreaching">See preaching</span> &nbsp;<i
+                                        class="fa fa-play"></i>
+                                </button>
+                            </div>
+                        </h3>
+                        <hr class="py-2">
+                        <p data-translate="comming">Comming soon...</p>
+                        <!-- <div class="pdfs">
+                            <div>
+                                <div class="loader" id="loader"></div>
+                                <div id="pdfView" class="shadow-lg"></div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="content-lessons shadow-lg">
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment
+                                            </span> <span class="font-weight-bold">#1</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(1)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment</span>
+                                            <span class="font-weight-bold">#2</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(2)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment</span>
+                                            <span class="font-weight-bold">#3</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(3)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment</span>
+                                            <span class="font-weight-bold">#4</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(4)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment</span>
+                                            <span class="font-weight-bold">#5</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(5)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment</span>
+                                            <span class="font-weight-bold">#6</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(6)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment</span>
+                                            <span class="font-weight-bold">#7</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(7)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment</span>
+                                            <span class="font-weight-bold">#8</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(8)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment</span>
+                                            <span class="font-weight-bold">#9</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(9)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment</span>
+                                            <span class="font-weight-bold">#10</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(10)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment</span>
+                                            <span class="font-weight-bold">#11</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(11)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                <div class="card shadow-lg mb-3" style="width: 18rem;">
+                                    <div class="content-img">
+                                        <img src="../assets/images/PDF.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><span data-translate="lesson1">First and Great
+                                                Commandment</span>
+                                            <span class="font-weight-bold">#12</span></p>
+                                        <a href="#" class="btn btn-outline-danger" data-translate="show"
+                                            onclick="showPdf(12)">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav aria-label="Page navigation example" class="ml-3">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(1)">1</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(2)">2</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(3)">3</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(4)">4</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(5)">5</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(6)">6</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(7)">7</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(8)">8</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(9)">9</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(10)">10</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(11)">11</a></li>
+                                <li class="page-item"><a class="page-link" onclick="showPdf(12)">12</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav> -->
                     </div>
                     <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
                         <h3 class="text-danger title-books d-flex justify-content-between flex-wrap"><span
@@ -742,13 +759,14 @@
                             </div>
                         </h3>
                         <hr class="py-2">
-                        <div class="pdfs">
+                        <p data-translate="comming">Comming soon...</p>
+                        <!-- <div class="pdfs">
                             <div>
                                 <div class="loader" id="loader3"></div>
                                 <div id="pdfView3" class="shadow-lg"></div>
                             </div>
-                        </div>
-                        <div class="content-lessons">
+                        </div> -->
+                        <!-- <div class="content-lessons">
                             <div class="col-md-3 d-flex justify-content-center align-items-center">
                                 <div class="card shadow-lg mb-3" style="width: 18rem;">
                                     <div class="content-img">
@@ -931,7 +949,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </nav>
+                        </nav> -->
                     </div>
                 </div>
             </div>
@@ -944,16 +962,18 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content shadow-lg">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle" data-translate="listenNotes">Listen to notes
+                    <h5 class="modal-title" id="exampleModalCenterTitle" data-translate="listenClass">Listen to notes
                     </h5>
                     <button type="button" class="close" data-dismiss="modal" onclick="closeAudio()" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body"><audio id="audio" controls autoplay>
+                <div class="modal-body" data-translate="comming">
+                    <!-- <audio id="audio" controls autoplay>
                         <source id="audios">
                         Your browser does not support the audio element.
-                    </audio>
+                    </audio> -->
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal" onclick="closeAudio()"
@@ -1004,7 +1024,7 @@
                         <source id="videos">
                         Your browser does not support the audio element.
                     </video>
-                    <iframe id="outvideo" src="lessons.html" style="width: 100%; height: 480px"
+                    <iframe id="outvideo" src="bilingual-teaching.html" style="width: 100%; height: 480px"
                         name="content-video"></iframe>
                 </div>
                 <div class="modal-footer">
@@ -1036,7 +1056,7 @@
     <script src="../js/translation/jqueryTranslator.min.js"></script>
     <script src="../js/popper/umd/popper.min.js"></script>
     <script src="../js/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../js/lessons.js"></script>
+    <script src="../js/blinigual-teaching.js"></script>
 </body>
 
 </html>

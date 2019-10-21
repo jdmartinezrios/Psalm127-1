@@ -14,6 +14,13 @@ body.pg-loaded > .inner {
     display: block;
 }
 
+ /* new update button class */
+.bilingual-teaching {
+    position: absolute;
+    right: 1em;
+}
+/* // */
+
 .pagination{
     flex-wrap: wrap;
 }
@@ -288,6 +295,11 @@ footer.page-footer .footer-copyright {
     h2.text-danger{
         margin-top: .5em;
     }
+    /* new update button class */
+    .bilingual-teaching {
+        position: unset;
+    }
+    /* // */
   }
 
   @media screen and (max-width: 460px) {
